@@ -1,0 +1,26 @@
+{
+  "site": {
+    "name": "ATR Innovations",
+    "tagline": "Building the future together",
+    "description": "ATR Innovations - A forward-thinking organization dedicated to innovation and excellence",
+    "contact": {
+      "email": "info@atrinnovations.com",
+      "phone": "+880-1234-567890",
+      "address": "Dhaka, Bangladesh"
+    },
+    "social": {
+      "facebook": "https://facebook.com/atrinnovations",
+      "twitter": "https://twitter.com/atrinnovations",
+      "linkedin": "https://linkedin.com/company/atrinnovations",
+      "instagram": "https://instagram.com/atrinnovations"
+    }
+  },
+  "about": {
+    "mission": "To empower communities through innovative solutions and sustainable development",
+    "vision": "A world where technology and human values create lasting positive change",
+    "founded": "2020",
+    "team_size": "50+"
+  },
+  "apiVersion": "1.0",
+  "lastUpdated": "2026-01-19"
+}

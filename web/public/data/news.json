@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "title": "Latest Innovation in Islamic Education",
+    "date": "2026-01-15",
+    "author": "Dr. Ahmed Hassan",
+    "summary": "Discovering new ways to teach Islamic values in modern society",
+    "content": "In recent years, educational methodologies have evolved significantly. Our organization is pioneering new approaches to Islamic education that blend traditional teachings with modern pedagogical techniques.",
+    "image": "/assets/news-01.jpg",
+    "featured": true,
+    "enabled": true,
+    "category": "education",
+    "views": 1250,
+    "likes": 342
+  },
+  {
+    "id": 2,
+    "title": "ATR Innovations Launches Community Support Program",
+    "date": "2026-01-10",
+    "author": "Media Team",
+    "summary": "New initiative to support underprivileged families in Dhaka",
+    "content": "We are proud to announce the launch of our comprehensive community support program. This initiative aims to provide financial assistance, educational support, and healthcare services to families in need.",
+    "image": "/assets/news-02.jpg",
+    "featured": true,
+    "enabled": true,
+    "category": "community",
+    "views": 2100,
+    "likes": 567
+  },
+  {
+    "id": 3,
+    "title": "Tech Skills Training Now Open for Applications",
+    "date": "2026-01-05",
+    "author": "HR Department",
+    "summary": "Free training program for aspiring tech professionals",
+    "content": "We are offering free technology skills training covering web development, digital marketing, and data analysis. This program is open to all passionate learners aged 18-35.",
+    "image": "/assets/news-03.jpg",
+    "featured": false,
+    "enabled": true,
+    "category": "training",
+    "views": 3450,
+    "likes": 892
+  },
+  {
+    "id": 4,
+    "title": "Success Stories: Lives Changed Through Our Programs",
+    "date": "2025-12-28",
+    "author": "Success Stories Team",
+    "summary": "Read how our initiatives have transformed communities",
+    "content": "Meet the individuals whose lives have been positively impacted by our programs. From students who became entrepreneurs to families who found stability, these stories inspire us to do more.",
+    "image": "/assets/news-04.jpg",
+    "featured": false,
+    "enabled": true,
+    "category": "stories",
+    "views": 1890,
+    "likes": 523
+  }
+]

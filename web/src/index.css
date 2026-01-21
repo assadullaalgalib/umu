@@ -1,0 +1,225 @@
+/* Import Tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Koro Animation Library CDN - will be included via script tag in HTML */
+
+/* Base Styles */
+:root {
+  --primary: #0F6A3B;
+  --primary-light: #0F6A3B;
+  --primary-dark: #0B4F2B;
+  --gold: #B28800;
+  --gold-light: #E6C77A;
+  --gold-dark: #B5952F;
+  --sky: #EAF3FA;
+  --sky-light: #F5F9FC;
+  --text-primary: #1F2937;
+  --text-muted: #6B7280;
+}
+
+* {
+  @apply scroll-smooth;
+}
+
+body {
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  @apply bg-sky-light text-text-primary antialiased;
+}
+
+/* Tailwind Config Overrides */
+@layer theme {
+  .bg-primary {
+    @apply bg-[#0F6A3B];
+  }
+  .bg-primary-dark {
+    @apply bg-[#0B4F2B];
+  }
+  .text-primary {
+    @apply text-[#0F6A3B];
+  }
+  .text-primary-dark {
+    @apply text-[#0B4F2B];
+  }
+  .bg-gold {
+    @apply bg-[#B28800];
+  }
+  .text-gold {
+    @apply text-[#B28800];
+  }
+  .bg-sky {
+    @apply bg-[#EAF3FA];
+  }
+  .bg-sky-light {
+    @apply bg-[#F5F9FC];
+  }
+  .text-text-primary {
+    @apply text-[#1F2937];
+  }
+  .text-text-muted {
+    @apply text-[#6B7280];
+  }
+}
+
+/* Navigation Styles */
+.nav-link {
+  @apply relative text-white text-sm font-semibold transition-colors;
+}
+
+.nav-link::after {
+  @apply absolute bottom-[-4px] left-0 h-[2px] bg-[#d4af37] transition-all;
+  width: 0;
+  content: '';
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active {
+  @apply text-[#d4af37] font-bold;
+}
+
+.nav-link.active::after {
+  width: 100%;
+}
+
+/* Hero Section */
+.hero {
+  @apply bg-cover bg-center relative;
+}
+
+.hero::before {
+  content: '';
+  @apply absolute inset-0 bg-black/10 z-0;
+}
+
+.hero-content {
+  @apply relative z-[2];
+}
+
+/* Page Visibility */
+.page-section {
+  @apply hidden animate-fadeIn;
+}
+
+.page-section.active-section {
+  @apply block;
+}
+
+/* Modal Styles */
+.modal {
+  @apply transition-opacity duration-300;
+}
+
+.modal.hidden {
+  @apply opacity-0 pointer-events-none;
+}
+
+.modal:not(.hidden) {
+  @apply opacity-100 pointer-events-auto;
+}
+
+/* Scrollbar Hide */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Snap Scroll */
+.snap-x {
+  scroll-snap-type: x mandatory;
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+  .nav-menu {
+    @apply hidden;
+  }
+  .nav-menu.open {
+    @apply flex;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out;
+}
+
+/* Line Clamp */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Prose Styling */
+.prose {
+  @apply max-w-none;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose ul {
+  @apply list-disc pl-5 my-4;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose strong {
+  @apply font-bold;
+}
+
+.prose button {
+  @apply inline-block mt-4;
+}
+
+/* Utility Classes */
+.container {
+  @apply max-w-7xl mx-auto;
+}
