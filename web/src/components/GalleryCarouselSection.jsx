@@ -1,6 +1,74 @@
 import { useRef, useState, useEffect } from "react";
 import { galleryAPI } from "../services/dataService";
 
+const galleryData = [
+  {
+    "id": 1,
+    "title": "Conference 2025",
+    "image": "/assets/gallery-01.jpg",
+    "thumbnail": "/assets/gallery-01-thumb.jpg",
+    "description": "Highlights from our annual conference",
+    "category": "events",
+    "date": "2025-11-15",
+    "enabled": true,
+    "featured": true,
+    "uploadedBy": "Admin",
+    "tags": ["conference", "2025", "gathering"]
+  },
+  {
+    "id": 2,
+    "title": "Community Outreach Program",
+    "image": "/assets/gallery-02.jpg",
+    "thumbnail": "/assets/gallery-02-thumb.jpg",
+    "description": "Our team engaging with the community",
+    "category": "community",
+    "date": "2025-10-20",
+    "enabled": true,
+    "featured": true,
+    "uploadedBy": "Admin",
+    "tags": ["community", "outreach", "volunteer"]
+  },
+  {
+    "id": 3,
+    "title": "Educational Workshop",
+    "image": "/assets/gallery-03.jpg",
+    "thumbnail": "/assets/gallery-03-thumb.jpg",
+    "description": "Students learning in our workshop",
+    "category": "education",
+    "date": "2025-09-10",
+    "enabled": true,
+    "featured": false,
+    "uploadedBy": "Admin",
+    "tags": ["education", "workshop", "learning"]
+  },
+  {
+    "id": 4,
+    "title": "Team Building Event",
+    "image": "/assets/gallery-04.jpg",
+    "thumbnail": "/assets/gallery-04-thumb.jpg",
+    "description": "Our dedicated team at the annual gathering",
+    "category": "team",
+    "date": "2025-08-15",
+    "enabled": true,
+    "featured": false,
+    "uploadedBy": "Admin",
+    "tags": ["team", "event", "celebration"]
+  },
+  {
+    "id": 5,
+    "title": "Charity Drive 2025",
+    "image": "/assets/gallery-05.jpg",
+    "thumbnail": "/assets/gallery-05-thumb.jpg",
+    "description": "Annual charity drive supporting local causes",
+    "category": "charity",
+    "date": "2025-07-22",
+    "enabled": true,
+    "featured": false,
+    "uploadedBy": "Admin",
+    "tags": ["charity", "donation", "community"]
+  }
+]
+
 function GalleryCarouselSection({ onNavigate = () => {} }) {
   const carouselRef = useRef(null);
   const [images, setImages] = useState([]);
@@ -8,7 +76,7 @@ function GalleryCarouselSection({ onNavigate = () => {} }) {
 
   const loadGallery = async () => {
     try {
-      const allGallery = await galleryAPI.getAllGallery();
+      const allGallery = galleryData; //await galleryAPI.getAllGallery();
       const enabledGallery = allGallery.filter(g => g.enabled === true);
       setImages(enabledGallery.slice(0, 7)); // Show first 7
     } catch (err) {

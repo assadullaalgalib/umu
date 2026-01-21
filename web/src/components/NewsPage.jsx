@@ -2,74 +2,100 @@ import { useEffect, useState } from 'react';
 import Pagination from './Pagination';
 import { newsAPI } from '../services/dataService';
 
-// const generateNewsData = (count) => {
-//   const newsImages = [
-//     "assets/gallary-02.jpg",
-//     "assets/gallary-03.jpg",
-//     "assets/gallary-04.jpg",
-//     "assets/gallary-05.jpg",
-//     "assets/gallay-06.jpg",
-//     "assets/gallary-07.jpg",
-//     "assets/gallary-08.jpg",
-//     "assets/gallary-09.jpg",
-//     "assets/gallay-10.jpg",
-//     "assets/gallary-11.jpg",
-//   ];
-
-//   return Array.from({ length: count }, (_, i) => ({
-//     id: i + 1,
-//     title: `News Title ${i + 1}: Global Initiative`,
-//     date: new Date(2026, i % 12, ((i * 3) % 28) + 1).toLocaleDateString(
-//       "en-US",
-//       { month: "short", day: "numeric", year: "numeric" }
-//     ),
-//     image: newsImages[i % newsImages.length],
-//     summary: `Summary for News ${
-//       i + 1
-//     }. This is a brief description of the content shown in the card view.`,
-//     content: `<p>This is the full detailed content for <strong>News ${
-//       i + 1
-//     }</strong>.</p><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>`,
-//   }));
-// };
-
-// const newsData = generateNewsData(25);
+const newsData = [
+  {
+    "id": 1,
+    "title": "Latest Innovation in Islamic Education",
+    "date": "2026-01-15",
+    "author": "Dr. Ahmed Hassan",
+    "summary": "Discovering new ways to teach Islamic values in modern society",
+    "content": "In recent years, educational methodologies have evolved significantly. Our organization is pioneering new approaches to Islamic education that blend traditional teachings with modern pedagogical techniques.",
+    "image": "/assets/news-01.jpg",
+    "featured": true,
+    "enabled": true,
+    "category": "education",
+    "views": 1250,
+    "likes": 342
+  },
+  {
+    "id": 2,
+    "title": "ATR Innovations Launches Community Support Program",
+    "date": "2026-01-10",
+    "author": "Media Team",
+    "summary": "New initiative to support underprivileged families in Dhaka",
+    "content": "We are proud to announce the launch of our comprehensive community support program. This initiative aims to provide financial assistance, educational support, and healthcare services to families in need.",
+    "image": "/assets/news-02.jpg",
+    "featured": true,
+    "enabled": true,
+    "category": "community",
+    "views": 2100,
+    "likes": 567
+  },
+  {
+    "id": 3,
+    "title": "Tech Skills Training Now Open for Applications",
+    "date": "2026-01-05",
+    "author": "HR Department",
+    "summary": "Free training program for aspiring tech professionals",
+    "content": "We are offering free technology skills training covering web development, digital marketing, and data analysis. This program is open to all passionate learners aged 18-35.",
+    "image": "/assets/news-03.jpg",
+    "featured": false,
+    "enabled": true,
+    "category": "training",
+    "views": 3450,
+    "likes": 892
+  },
+  {
+    "id": 4,
+    "title": "Success Stories: Lives Changed Through Our Programs",
+    "date": "2025-12-28",
+    "author": "Success Stories Team",
+    "summary": "Read how our initiatives have transformed communities",
+    "content": "Meet the individuals whose lives have been positively impacted by our programs. From students who became entrepreneurs to families who found stability, these stories inspire us to do more.",
+    "image": "/assets/news-04.jpg",
+    "featured": false,
+    "enabled": true,
+    "category": "stories",
+    "views": 1890,
+    "likes": 523
+  }
+];
 
 export default function NewsPage({ onOpenModal = () => {} }) {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 6;
-  const [newsData, setNewsData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [newsData, setNewsData] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
-  const loadNews = async () => {
-      try {
-        const allNews = await newsAPI.getAllNews();
-        const enabledNews = allNews.filter(n => n.enabled === true);
-        setNewsData(enabledNews.slice(0, 4)); // Show first 4
-      } catch (err) {
-        console.error('Error loading news:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
+  // const loadNews = async () => {
+  //     try {
+  //       const allNews = await newsAPI.getAllNews();
+  //       const enabledNews = allNews.filter(n => n.enabled === true);
+  //       setNewsData(enabledNews.slice(0, 4)); // Show first 4
+  //     } catch (err) {
+  //       console.error('Error loading news:', err);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
   
-    useEffect(() => {
-      loadNews();
-    }, []);
+  //   useEffect(() => {
+  //     loadNews();
+  //   }, []);
 
   const startIdx = (currentPage - 1) * itemsPerPage;
   const paginatedNews = newsData.slice(startIdx, startIdx + itemsPerPage);
 
-  if (loading) {
-    return (
-      <section className="py-24">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-primary mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading news...</p>
-        </div>
-      </section>
-    );
-  }
+  // if (loading) {
+  //   return (
+  //     <section className="py-24">
+  //       <div className="text-center">
+  //         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-primary mx-auto mb-4"></div>
+  //         <p className="text-gray-600">Loading news...</p>
+  //       </div>
+  //     </section>
+  //   );
+  // }
 
   return (
     <section className="min-h-screen">

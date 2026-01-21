@@ -2,60 +2,95 @@ import { useEffect, useState } from 'react';
 import Pagination from './Pagination';
 import { galleryAPI } from '../services/dataService';
 
-// const galleryData = [
-//   { id: 1, title: "Beautiful Islamic Calligraphy", image: "assets/gallery-01.jpg" },
-//   { id: 2, title: "Historic Mosque Architecture", image: "assets/gallary-02.jpg" },
-//   { id: 3, title: "Quranic Verses Display", image: "assets/gallary-03.jpg" },
-//   { id: 4, title: "Islamic Cultural Festival", image: "assets/gallary-04.jpg" },
-//   { id: 5, title: "Grand Mosque Interior", image: "assets/gallary-05.jpg" },
-//   { id: 6, title: "Ramadan Celebrations", image: "assets/gallay-06.jpg" },
-//   { id: 7, title: "Islamic Art & Patterns", image: "assets/gallary-07.jpg" },
-//   { id: 8, title: "Ummah Unity Event", image: "assets/gallary-08.jpg" },
-//   { id: 9, title: "Quran Competition Finals", image: "assets/gallary-09.jpg" },
-//   { id: 10, title: "Mosque Dome & Minarets", image: "assets/gallay-10.jpg" },
-//   { id: 11, title: "Islamic Educational Programs", image: "assets/gallary-11.jpg" },
-//   { id: 12, title: "Historical Islamic Manuscripts", image: "assets/gallry-14.jpg" },
-//   { id: 13, title: "Cultural Heritage Preservation", image: "assets/gallery-01.jpg" },
-//   { id: 14, title: "Islamic Geometric Art", image: "assets/gallary-02.jpg" },
-//   { id: 15, title: "Eid Festival Gathering", image: "assets/gallary-03.jpg" },
-//   { id: 16, title: "Beautiful Islamic Tiles", image: "assets/gallary-04.jpg" },
-//   { id: 17, title: "Halal Expo Exhibition", image: "assets/gallary-05.jpg" },
-//   { id: 18, title: "Islamic Science & Innovation", image: "assets/gallay-06.jpg" },
-//   { id: 19, title: "Community Service Initiative", image: "assets/gallary-07.jpg" },
-//   { id: 20, title: "Islamic Fashion Week", image: "assets/gallary-08.jpg" },
-//   { id: 21, title: "Mosque Courtyard Evening", image: "assets/gallary-09.jpg" },
-//   { id: 22, title: "Islamic Knowledge Gathering", image: "assets/gallay-10.jpg" },
-//   { id: 23, title: "Sufi Spiritual Music", image: "assets/gallary-11.jpg" },
-//   { id: 24, title: "Islamic Calligraphy Workshop", image: "assets/gallry-14.jpg" },
-//   { id: 25, title: "Global Muslim Solidarity", image: "assets/gallery-01.jpg" },
-//   { id: 26, title: "Young Scholars Discussion", image: "assets/gallary-02.jpg" },
-//   { id: 27, title: "Islamic Architecture Tour", image: "assets/gallary-03.jpg" },
-//   { id: 28, title: "Community Iftar Gathering", image: "assets/gallary-04.jpg" },
-//   { id: 29, title: "Islamic Heritage Museum", image: "assets/gallary-05.jpg" },
-//   { id: 30, title: "Unity in Diversity", image: "assets/gallay-06.jpg" },
-// ];
+const galleryData = [
+  {
+    "id": 1,
+    "title": "Conference 2025",
+    "image": "/assets/gallery-01.jpg",
+    "thumbnail": "/assets/gallery-01-thumb.jpg",
+    "description": "Highlights from our annual conference",
+    "category": "events",
+    "date": "2025-11-15",
+    "enabled": true,
+    "featured": true,
+    "uploadedBy": "Admin",
+    "tags": ["conference", "2025", "gathering"]
+  },
+  {
+    "id": 2,
+    "title": "Community Outreach Program",
+    "image": "/assets/gallery-02.jpg",
+    "thumbnail": "/assets/gallery-02-thumb.jpg",
+    "description": "Our team engaging with the community",
+    "category": "community",
+    "date": "2025-10-20",
+    "enabled": true,
+    "featured": true,
+    "uploadedBy": "Admin",
+    "tags": ["community", "outreach", "volunteer"]
+  },
+  {
+    "id": 3,
+    "title": "Educational Workshop",
+    "image": "/assets/gallery-03.jpg",
+    "thumbnail": "/assets/gallery-03-thumb.jpg",
+    "description": "Students learning in our workshop",
+    "category": "education",
+    "date": "2025-09-10",
+    "enabled": true,
+    "featured": false,
+    "uploadedBy": "Admin",
+    "tags": ["education", "workshop", "learning"]
+  },
+  {
+    "id": 4,
+    "title": "Team Building Event",
+    "image": "/assets/gallery-04.jpg",
+    "thumbnail": "/assets/gallery-04-thumb.jpg",
+    "description": "Our dedicated team at the annual gathering",
+    "category": "team",
+    "date": "2025-08-15",
+    "enabled": true,
+    "featured": false,
+    "uploadedBy": "Admin",
+    "tags": ["team", "event", "celebration"]
+  },
+  {
+    "id": 5,
+    "title": "Charity Drive 2025",
+    "image": "/assets/gallery-05.jpg",
+    "thumbnail": "/assets/gallery-05-thumb.jpg",
+    "description": "Annual charity drive supporting local causes",
+    "category": "charity",
+    "date": "2025-07-22",
+    "enabled": true,
+    "featured": false,
+    "uploadedBy": "Admin",
+    "tags": ["charity", "donation", "community"]
+  }
+]
 
 export default function GalleryPage() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;
-  const [galleryData, setGalleryData] = useState([]);
-  const [loading, setLoading] = useState(true);
+  // const [galleryData, setGalleryData] = useState([]);
+  // const [loading, setLoading] = useState(true);
 
-  const loadGallery = async () => {
-      try {
-        const allGallery = await galleryAPI.getAllGallery();
-        const enabledGallery = allGallery.filter(g => g.enabled === true);
-        setGalleryData(enabledGallery.slice(0, 7)); // Show first 7
-      } catch (err) {
-        console.error('Error loading gallery:', err);
-      } finally {
-        setLoading(false);
-      }
-    };
+  // const loadGallery = async () => {
+  //     try {
+  //       const allGallery = galleryData; //await galleryAPI.getAllGallery();
+  //       const enabledGallery = allGallery.filter(g => g.enabled === true);
+  //       setGalleryData(enabledGallery.slice(0, 7)); // Show first 7
+  //     } catch (err) {
+  //       console.error('Error loading gallery:', err);
+  //     } finally {
+  //       setLoading(false);
+  //     }
+  //   };
   
-  useEffect(() => {
-    loadGallery();
-  }, []);
+  // useEffect(() => {
+  //   loadGallery();
+  // }, []);
 
   
   const startIdx = (currentPage - 1) * itemsPerPage;
@@ -64,16 +99,16 @@ export default function GalleryPage() {
     startIdx + itemsPerPage
   );
 
-   if (loading || !galleryData) {
-    return (
-      <section className="container mx-auto px-4 py-24 max-w-6xl">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-primary mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading latest event...</p>
-        </div>
-      </section>
-    );
-  }
+  //  if (loading || !galleryData) {
+  //   return (
+  //     <section className="container mx-auto px-4 py-24 max-w-6xl">
+  //       <div className="text-center">
+  //         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-primary mx-auto mb-4"></div>
+  //         <p className="text-gray-600">Loading latest event...</p>
+  //       </div>
+  //     </section>
+  //   );
+  // }
 
   return (
     <section className="min-h-screen">
