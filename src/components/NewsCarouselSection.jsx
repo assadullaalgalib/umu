@@ -122,11 +122,11 @@ function NewsCarouselSection({ onOpenModal = () => {}, onNavigate = () => {} }) 
               <p className="text-gray-600">No news articles available yet.</p>
             </div>
           ) : (
-            <div id="news-carousel" className="flex gap-6 overflow-x-auto snap-x scrollbar-hide pb-4">
+            <div id="news-carousel" className="flex gap-6 overflow-x-auto snap-x pb-4">
               {articles.map((item) => (
                 <div
                   key={item.id}
-                  className="flex-none w-80 bg-white rounded-xl shadow-md overflow-hidden snap-center cursor-pointer hover:-translate-y-1 transition-transform border border-gray-100 flex flex-col"
+                  className="flex-none w-72 sm:w-80 bg-white rounded-xl shadow-md overflow-hidden snap-center cursor-pointer hover:-translate-y-1 transition-transform border border-gray-100 flex flex-col"
                   onClick={() => onOpenModal('news', item)}
                 >
                   <div className="h-48 overflow-hidden">
