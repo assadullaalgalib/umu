@@ -1,11 +1,10 @@
-import { useState, useEffect } from 'react';
-import { eventsAPI } from '../services/dataService';
+import { useEffect, useState } from 'react';
 
 const eventsData = [
 {
   "id": 4,
   "title": "Bangladesh Halal Expo - 2026",
-  "date": "2026-02-07",
+  "date": "2026-07-06",
   "time": "6:00 PM",
   "location": "China Bangladesh Friendship Conference Center",
   "description": "Bangladesh Halal Expo 2026 stands as a trusted meeting point of the global halal economy, bringing together international exhibitors, buyers, innovators, and policymakers on one prestigious platform. Guided by the principles of halal, ethical trade, and sustainability, the Expo reflects a shared vision of inclusive growth and responsible commerce.",
@@ -22,7 +21,7 @@ const eventsData = [
   {
     "id": 5,
     "title": "Islamic History & Culture Olympiad 2026",
-    "date": "2026-02-10",
+    "date": "2026-06-10",
     "time": "10:00 AM",
     "location": "Dhaka Convention Center",
     "description": "Annual Islamic conference bringing together scholars and leaders",

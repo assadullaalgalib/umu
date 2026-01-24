@@ -41,7 +41,7 @@ const MissionSection = () => {
                 </h3>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              To foster global unity within the Muslim Ummah by resolving internal conflicts and promoting dialogue, empathy, and mutual understanding.
+               To free and salvage the world humanity form all evil, to be united all the Muslims and Non-Muslim. Our main objective is to establish unity, solidarity and brotherhood among the muslims of the world. Our task is to keep peace and tranquillity to protect spiritual values and the unity, to establish peace, happiness and prosperity all over the Muslim and Non- Muslim territories of the world. Taking proper measures for realization of women's rights indicated in Islam. To Improving of public opinion against terrorism, war, aggression, violation, Mass produce weapons also against homosexuality, to save universal family system in the world.
             </p>
           </div>
 
@@ -75,7 +75,7 @@ const MissionSection = () => {
                 </h3>
             </div>
             <p className="text-gray-600 leading-relaxed">
-              To establish a resilient, empowered, and influential global Muslim community that contributes positively to the world.
+              To work with world humanity to stop interethnic and interrelations conflicts and work against terrorism, war, aggression, violation, Mass produce weapons. To work for to establish a new world order without, drags, war, alcohol, homosexuality, destruction of the institute of family, mass hunger. To organize world peace march to stop above cause and work for to establish a new world peace organization.
             </p>
           </div>
         </div>

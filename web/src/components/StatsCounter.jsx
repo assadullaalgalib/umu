@@ -12,7 +12,7 @@ export default function StatsSection() {
     const animateCounters = () => {
       const targets = {
         muslims: 1900,
-        countries: 60,
+        countries: 63,
         united: 100,
         initiatives: 50,
       };
@@ -50,7 +50,7 @@ export default function StatsSection() {
             {counters.muslims.toLocaleString()}+
           </h3>
           <p className="text-xs md:text-sm text-gray-500 font-bold uppercase tracking-wider mt-1">
-            Million Muslims
+            Million Followers
           </p>
         </div>
         <div className="text-center">

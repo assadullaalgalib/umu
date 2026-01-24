@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Modal from './Modal';
 
 const AboutPage = ({ onNavigate }) => {
@@ -37,7 +37,7 @@ const AboutPage = ({ onNavigate }) => {
                 Who We Are
               </h2>
               <p className="text-gray-700 text-lg mb-6 leading-relaxed">
-                United Muslim Ummah (UMU) is an international organization representing the interests and values of the global Muslim community. With presence in 60+ countries, we serve over 1.9 billion Muslims worldwide.
+                United Muslim Ummah (UMU) is an international organization representing the interests and values of the global Muslim community. With presence in 63+ countries, we are working for the interest 2+ billion Muslims of the world.
               </p>
               <p className="text-gray-700 text-lg mb-6 leading-relaxed">
                 Founded on principles of Islamic unity, interfaith cooperation, and social responsibility, UMU works to address pressing global challenges including poverty, conflict, healthcare access, and educational inequity.
@@ -52,11 +52,11 @@ const AboutPage = ({ onNavigate }) => {
               <h3 className="text-2xl font-bold mb-8 text-center">Our Reach & Impact</h3>
               <div className="grid grid-cols-2 gap-6">
                 <div className="bg-white/10 rounded-xl p-6 text-center backdrop-blur-sm">
-                  <div className="text-4xl font-black mb-2">60+</div>
+                  <div className="text-4xl font-black mb-2">63+</div>
                   <div className="text-sm font-semibold opacity-95">Member Countries</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-6 text-center backdrop-blur-sm">
-                  <div className="text-4xl font-black mb-2">1.9B</div>
+                  <div className="text-4xl font-black mb-2">2+ B</div>
                   <div className="text-sm font-semibold opacity-95">Muslims Represented</div>
                 </div>
                 <div className="bg-white/10 rounded-xl p-6 text-center backdrop-blur-sm">
@@ -66,6 +66,90 @@ const AboutPage = ({ onNavigate }) => {
                 <div className="bg-white/10 rounded-xl p-6 text-center backdrop-blur-sm">
                   <div className="text-4xl font-black mb-2">500+</div>
                   <div className="text-sm font-semibold opacity-95">Implementation Centers</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Membership */}
+      <div className="py-20 border-b border-gray-200">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-black text-center text-primary mb-16">
+            Who Can Be Member of UMU?
+          </h2>
+
+          <div className="max-w-4xl mx-auto">
+            <p className="text-center text-gray-700 text-lg mb-12 leading-relaxed">
+              Those people who believe in the one Allah & the Prophet Muhammad (PBUH) is the last Prophet of Allah and held with a view of establish the unity of Ummah 
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Genaler Members */}
+              <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all border-t-4 border-gold">
+                <div className="text-4xl mb-4">👤</div>
+                <h3 className="text-xl font-bold text-primary mb-4">General Member</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  Those who are Muslim and believe in one God, held with a view to establish the United Muslim Ummah Foundation and willing to contribute by any means towards social development will be considered as general member by recognition of founder. Founder and his representative will get priority to be elected as member of the Executive Board.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold font-bold">✓</span>
+                    <span className="text-sm text-gray-700">Application fee: Tk. 500/-</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold font-bold">✓</span>
+                    <span className="text-sm text-gray-700">Application approved by founder and president</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold font-bold">✓</span>
+                    <span className="text-sm text-gray-700">Priority election rights for founder and representatives</span>
+                  </li>
+                </ul>
+              </div>
+
+              {/* Life Member */}
+              <div className="bg-white rounded-xl shadow-md p-8 hover:shadow-lg transition-all border-t-4 border-gold">
+                <div className="text-4xl mb-4">👑</div>
+                <h3 className="text-xl font-bold text-primary mb-4">Life Member</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
+                  After motivated to know the objectives and programs of the United Muslim Ummah Foundation, those who will donate Tk. 100,000/- or more will be treated as a life member.
+                </p>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold font-bold">✓</span>
+                    <span className="text-sm text-gray-700">Minimum donation: Tk. 100,000/-</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold font-bold">✓</span>
+                    <span className="text-sm text-gray-700">Lifetime membership status</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-gold font-bold">✓</span>
+                    <span className="text-sm text-gray-700">Treated as new committee of foundation</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="bg-sky-light rounded-xl p-8 mt-8 text-center">
+              <h3 className="text-xl font-bold text-primary mb-4">Membership Benefits</h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div>
+                  <div className="text-3xl mb-2">🤝</div>
+                  <h4 className="font-bold text-primary mb-2">Networking</h4>
+                  <p className="text-sm text-gray-600">Connect with global Muslim leaders and organizations</p>
+                </div>
+                <div>
+                  <div className="text-3xl mb-2">📚</div>
+                  <h4 className="font-bold text-primary mb-2">Resources</h4>
+                  <p className="text-sm text-gray-600">Access to research, publications, and educational materials</p>
+                </div>
+                <div>
+                  <div className="text-3xl mb-2">🎯</div>
+                  <h4 className="font-bold text-primary mb-2">Participation</h4>
+                  <p className="text-sm text-gray-600">Take part in programs, conferences, and decision-making</p>
                 </div>
               </div>
             </div>
@@ -90,7 +174,7 @@ const AboutPage = ({ onNavigate }) => {
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">Our Mission</h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                To unite Muslim communities globally in pursuing shared humanitarian goals while promoting interfaith dialogue, advancing education and development, and advocating for social justice and human dignity.
+                To free and salvage the world humanity form all evil, to be united all the Muslims and Non-Muslim. Our main objective is to establish unity, solidarity and brotherhood among the muslims of the world. Our task is to keep peace and tranquillity to protect spiritual values and the unity, to establish peace, happiness and prosperity all over the Muslim and Non- Muslim territories of the world. Taking proper measures for realization of women's rights indicated in Islam. To Improving of public opinion against terrorism, war, aggression, violation, Mass produce weapons also against homosexuality, to save universal family system in the world.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -118,7 +202,7 @@ const AboutPage = ({ onNavigate }) => {
               </div>
               <h3 className="text-2xl font-bold text-primary mb-4">Our Vision</h3>
               <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                A world where Muslim communities flourish with dignity and security, contribute meaningfully to global advancement in science and culture, and where justice, compassion, and peace guide collective action toward universal human prosperity.
+                To work with world humanity to stop interethnic and interrelations conflicts and work against terrorism, war, aggression, violation, Mass produce weapons. To work for to establish a new world order without, drags, war, alcohol, homosexuality, destruction of the institute of family, mass hunger. To organize world peace march to stop above cause and work for to establish a new world peace organization.
               </p>
               <ul className="space-y-3">
                 <li className="flex items-start gap-3">
@@ -177,6 +261,16 @@ const AboutPage = ({ onNavigate }) => {
                 title: "Inclusivity",
                 description: "We welcome diverse voices and perspectives, fostering meaningful participation from all demographic groups.",
                 icon: "🌍"
+              },
+              {
+                title: "Brotherhood",
+                description: "Fostering strong bonds of brotherhood among Muslims worldwide, promoting mutual support and cooperation.",
+                icon: "👥"
+              },
+              {
+                title: "Peace",
+                description: "Advocating for peace, harmony, and conflict resolution to create a peaceful world for all humanity.",
+                icon: "🕊️"
               }
             ].map((value, index) => (
               <div
@@ -425,50 +519,141 @@ const AboutPage = ({ onNavigate }) => {
                   name: "Madzhumder Muhammad Amin",
                   title: "President",
                   description: "Strategic leadership and organizational oversight",
-                  color: "from-blue-500 to-blue-600"
+                  color: "from-blue-500 to-blue-600",
+                  image: "https://via.placeholder.com/400x200?text=Madzhumder+Muhammad+Amin"
                 },
                 {
                   name: "Khan Tipu Sultan",
-                  title: "Vice-President",
+                  title: "Senior Vice-President",
                   description: "Deputy leadership and special initiatives coordination",
-                  color: "from-green-500 to-green-600"
+                  color: "from-green-500 to-green-600",
+                  image: "https://via.placeholder.com/400x200?text=Khan+Tipu+Sultan"
+                },
+                {
+                  name: "Obaidul Haq Nodhovi",
+                  title: "centeral Baitul Mokaram Mosque and Senior Vice-President",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "https://via.placeholder.com/400x200?text=Obaidul+Haq+Nodhovi"
+                },
+                {
+                  name: "Musa Al Hafiz",
+                  title: "Senior Vice-President",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "https://via.placeholder.com/400x200?text=Musa+Al+Hafiz"
+                },
+                {
+                  name: "Prof.Dr.Rakibul Haque",
+                  title: "Charment Dept of Mis in Dhaka University and  Vice-President",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "https://via.placeholder.com/400x200?text=Prof.Dr.Rakibul+Haque"
+                },
+                {
+                  name: "Professor Dr. Kamrul Hasan",
+                  title: "Vice President & Chairman, Education and Research Committee",
+                  description: "Leading education initiatives and research coordination",
+                  color: "from-lime-500 to-lime-600",
+                  image: "https://via.placeholder.com/400x200?text=Professor+Dr.+Kamrul+Hasan"
+                },
+                {
+                  name: "Professor Dr. Ariful Islam",
+                  title: "Assistant Professor, University of Dhaka & Vice President, UMU",
+                  description: "Academic leadership and vice presidential duties",
+                  color: "from-yellow-500 to-yellow-600",
+                  image: "https://via.placeholder.com/400x200?text=Professor+Dr.+Ariful+Islam"
                 },
                 {
                   name: "Mohammad Nurul Alam Bhuiyan",
                   title: "Secretary General",
                   description: "General administration and executive operations",
-                  color: "from-purple-500 to-purple-600"
+                  color: "from-purple-500 to-purple-600",
+                  image: "https://via.placeholder.com/400x200?text=Mohammad+Nurul+Alam+Bhuiyan"
                 },
                 {
-                  name: "Shewly Rashid",
-                  title: "Director of Work",
-                  description: "Program implementation and field operations",
-                  color: "from-pink-500 to-pink-600"
+                  name: "Mufti Mohammad Osman Goni",
+                  title: "Secretary General",
+                  description: "Overseeing administrative operations and executive coordination",
+                  color: "from-teal-500 to-teal-600",
+                  image: "https://via.placeholder.com/400x200?text=Mufti+Mohammad+Osman+Goni"
+                },
+                {
+                  name: "Shahadat Yousuf",
+                  title: "Assistant Secretary General",
+                  description: "Supporting administrative functions and executive assistance",
+                  color: "from-cyan-500 to-cyan-600",
+                  image: "https://via.placeholder.com/400x200?text=Shahadat+Yousuf"
                 },
                 {
                   name: "Nizam Uddin",
                   title: "Director of Press & Publication",
                   description: "Media relations and publication management",
-                  color: "from-orange-500 to-orange-600"
+                  color: "from-orange-500 to-orange-600",
+                  image: "https://via.placeholder.com/400x200?text=Nizam+Uddin"
                 },
                 {
                   name: "Arafat Hasnain",
                   title: "Director of Finance",
                   description: "Financial management and resource allocation",
-                  color: "from-red-500 to-red-600"
+                  color: "from-red-500 to-red-600",
+                  image: "https://via.placeholder.com/400x200?text=Arafat+Hasnain"
+                },
+                {
+                  name: "Aminiah Asquarata",
+                  title: "Chairwoman, Women's Network",
+                  description: "Leading women's empowerment and network activities",
+                  color: "from-pink-500 to-pink-600",
+                  image: "https://via.placeholder.com/400x200?text=Aminiah+Asquarata"
+                },
+                {
+                  name: "S. M. Maruf Hasan Nirob",
+                  title: "Head, Young Network",
+                  description: "Managing youth programs and network development",
+                  color: "from-rose-500 to-rose-600",
+                  image: "https://via.placeholder.com/400x200?text=S.+M.+Maruf+Hasan+Nirob"
+                },
+                {
+                  name: "Aby Sayem",
+                  title: "Chairman, International Committee",
+                  description: "Overseeing international relations and committee affairs",
+                  color: "from-violet-500 to-violet-600",
+                  image: "https://via.placeholder.com/400x200?text=Aby+Sayem"
+                },
+                {
+                  name: "Shoid Ahmed Kayes",
+                  title: "Chairman, Human Rights Committee",
+                  description: "Advocating for human rights and committee leadership",
+                  color: "from-fuchsia-500 to-fuchsia-600",
+                  image: "https://via.placeholder.com/400x200?text=Shoid+Ahmed+Kayes"
+                },
+                {
+                  name: "Shofikur Rahman",
+                  title: "Chairman, Relief and Rehabilitation Committee",
+                  description: "Coordinating relief efforts and rehabilitation programs",
+                  color: "from-emerald-500 to-emerald-600",
+                  image: "https://via.placeholder.com/400x200?text=Shofikur+Rahman"
+                },
+                {
+                  name: "Mufti Mohammad Osman Goni",
+                  title: "Chairman, Ulama Committee",
+                  description: "Leading religious scholars and committee guidance",
+                  color: "from-slate-500 to-slate-600",
+                  image: "https://via.placeholder.com/400x200?text=Mufti+Mohammad+Osman+Goni"
                 },
                 {
                   name: "Md. Abu Naser Khan",
                   title: "Executive Member",
                   description: "Additional executive support and coordination",
-                  color: "from-indigo-500 to-indigo-600"
+                  color: "from-indigo-500 to-indigo-600",
+                  image: "https://via.placeholder.com/400x200?text=Md.+Abu+Naser+Khan"
                 }
               ].map((member, index) => (
                 <div
                   key={index}
                   className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all"
                 >
-                  <div className={`bg-gradient-to-r ${member.color} h-24`}></div>
+                  <img src={member.image} alt={member.name} className="w-full h-24 object-cover" />
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-primary mb-1">{member.name}</h3>
                     <p className="text-gold font-bold mb-3">{member.title}</p>

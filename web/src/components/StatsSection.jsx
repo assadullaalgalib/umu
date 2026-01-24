@@ -48,8 +48,8 @@ const StatsSection = () => {
   return (
     <div className="container mx-auto px-4 -mt-16 relative z-10 mb-20">
       <div className="bg-white rounded-xl shadow-xl p-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-        <StatItem target={1900} label="Million Muslims" />
-        <StatItem target={60} label="Member Countries" />
+        <StatItem target={1900} label="Million Followers" />
+        <StatItem target={63} label="Member Countries" />
         <StatItem target={100} label="Percent United" />
         <StatItem target={50} label="Peace Initiatives" />
       </div>

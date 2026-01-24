@@ -1,10 +1,9 @@
-import { useRef, useState, useEffect } from "react";
-import { galleryAPI } from "../services/dataService";
+import { useEffect, useRef, useState } from "react";
 
 const galleryData = [
   {
     "id": 1,
-    "title": "Conference 2025",
+    "title": "Conference 2018 ",
     "image": "/assets/gallery-01.jpg",
     "thumbnail": "/assets/gallery-01-thumb.jpg",
     "description": "Highlights from our annual conference",
@@ -17,7 +16,7 @@ const galleryData = [
   },
   {
     "id": 2,
-    "title": "Community Outreach Program",
+    "title": "Price ceremony Program",
     "image": "/assets/gallery-02.jpg",
     "thumbnail": "/assets/gallery-02-thumb.jpg",
     "description": "Our team engaging with the community",
@@ -30,7 +29,7 @@ const galleryData = [
   },
   {
     "id": 3,
-    "title": "Educational Workshop",
+    "title": "Anti-terrorism Program",
     "image": "/assets/gallery-03.jpg",
     "thumbnail": "/assets/gallery-03-thumb.jpg",
     "description": "Students learning in our workshop",
@@ -43,7 +42,7 @@ const galleryData = [
   },
   {
     "id": 4,
-    "title": "Team Building Event",
+    "title": "Al-AQSA grand Mufti receaptions",
     "image": "/assets/gallery-04.jpg",
     "thumbnail": "/assets/gallery-04-thumb.jpg",
     "description": "Our dedicated team at the annual gathering",
@@ -56,7 +55,7 @@ const galleryData = [
   },
   {
     "id": 5,
-    "title": "Charity Drive 2025",
+    "title": "Grand Mufti of  Al-AQSA giveing chest ",
     "image": "/assets/gallery-05.jpg",
     "thumbnail": "/assets/gallery-05-thumb.jpg",
     "description": "Annual charity drive supporting local causes",
