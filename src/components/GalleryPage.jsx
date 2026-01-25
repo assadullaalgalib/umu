@@ -1,113 +1,50 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Pagination from './Pagination';
-
-const galleryData = [
-  {
-    "id": 1,
-    "title": "Conference 2018 ",
-    "image": "/assets/gallery-01.jpg",
-    "thumbnail": "/assets/gallery-01-thumb.jpg",
-    "description": "Highlights from our annual conference",
-    "category": "events",
-    "date": "2025-11-15",
-    "enabled": true,
-    "featured": true,
-    "uploadedBy": "Admin",
-    "tags": ["conference", "2018", "gathering"]
-  },
-  {
-    "id": 2,
-    "title": "Price ceremony Program",
-    "image": "/assets/gallery-02.jpg",
-    "thumbnail": "/assets/gallery-02-thumb.jpg",
-    "description": "Our team engaging with the community",
-    "category": "community",
-    "date": "2025-10-20",
-    "enabled": true,
-    "featured": true,
-    "uploadedBy": "Admin",
-    "tags": ["community", "outreach", "volunteer"]
-  },
-  {
-    "id": 3,
-    "title": "Anti-terrorism Program",
-    "image": "/assets/gallery-03.jpg",
-    "thumbnail": "/assets/gallery-03-thumb.jpg",
-    "description": "Students learning in our workshop",
-    "category": "education",
-    "date": "2025-09-10",
-    "enabled": true,
-    "featured": false,
-    "uploadedBy": "Admin",
-    "tags": ["education", "workshop", "learning"]
-  },
-  {
-    "id": 4,
-    "title": "Al-AQSA grand Mufti receaptions",
-    "image": "/assets/gallery-04.jpg",
-    "thumbnail": "/assets/gallery-04-thumb.jpg",
-    "description": "Our dedicated team at the annual gathering",
-    "category": "team",
-    "date": "2025-08-15",
-    "enabled": true,
-    "featured": false,
-    "uploadedBy": "Admin",
-    "tags": ["team", "event", "celebration"]
-  },
-  {
-    "id": 5,
-    "title": "Grand Mufti of  Al-AQSA giveing chest",
-    "image": "/assets/gallery-05.jpg",
-    "thumbnail": "/assets/gallery-05-thumb.jpg",
-    "description": "Annual charity drive supporting local causes",
-    "category": "charity",
-    "date": "2025-07-22",
-    "enabled": true,
-    "featured": false,
-    "uploadedBy": "Admin",
-    "tags": ["charity", "donation", "community"]
-  }
-]
 
 export default function GalleryPage() {
   const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 12;
-  // const [galleryData, setGalleryData] = useState([]);
-  // const [loading, setLoading] = useState(true);
+  const [galleryData, setGalleryData] = useState([]);
+  const [loading, setLoading] = useState(true);  const [selectedImage, setSelectedImage] = useState(null);  const itemsPerPage = 20;
 
-  // const loadGallery = async () => {
-  //     try {
-  //       const allGallery = galleryData; //await galleryAPI.getAllGallery();
-  //       const enabledGallery = allGallery.filter(g => g.enabled === true);
-  //       setGalleryData(enabledGallery.slice(0, 7)); // Show first 7
-  //     } catch (err) {
-  //       console.error('Error loading gallery:', err);
-  //     } finally {
-  //       setLoading(false);
-  //     }
-  //   };
-  
-  // useEffect(() => {
-  //   loadGallery();
-  // }, []);
+  useEffect(() => {
+    const loadGallery = async () => {
+      try {
+        console.log('Fetching gallery data...');
+        const response = await fetch('/data/gallery.json');
+        console.log('Response status:', response.status);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        console.log('Gallery data loaded:', data.length, 'items');
+        setGalleryData(data);
+      } catch (err) {
+        console.error('Error loading gallery:', err);
+        // Fallback to empty array
+        setGalleryData([]);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadGallery();
+  }, []);
 
-  
   const startIdx = (currentPage - 1) * itemsPerPage;
   const paginatedGallery = galleryData.slice(
     startIdx,
     startIdx + itemsPerPage
   );
 
-  //  if (loading || !galleryData) {
-  //   return (
-  //     <section className="container mx-auto px-4 py-24 max-w-6xl">
-  //       <div className="text-center">
-  //         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-primary mx-auto mb-4"></div>
-  //         <p className="text-gray-600">Loading latest event...</p>
-  //       </div>
-  //     </section>
-  //   );
-  // }
+  if (loading || !galleryData.length) {
+    return (
+      <section className="container mx-auto px-4 py-24 max-w-6xl">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-primary mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading gallery...</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="min-h-screen">
@@ -120,12 +57,11 @@ export default function GalleryPage() {
       <div className="container mx-auto px-4 py-12 max-w-7xl">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[200px] mb-12">
           {paginatedGallery.map((item, index) => {
-            const spanClass =
-              index % 5 === 0 ? 'col-span-2 row-span-2' : 'col-span-1 row-span-1';
             return (
               <div
                 key={item.id}
-                className={`${spanClass} relative group overflow-hidden rounded-xl cursor-pointer`}
+                className="col-span-1 row-span-1 relative group overflow-hidden rounded-xl cursor-pointer"
+                onClick={() => setSelectedImage(item)}
               >
                 <img
                   src={item.image}
@@ -152,6 +88,38 @@ export default function GalleryPage() {
           onChange={setCurrentPage}
         />
       </div>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm"
+          onClick={() => setSelectedImage(null)}
+        >
+          <div
+            className="relative max-w-4xl max-h-[90vh] w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              onClick={() => setSelectedImage(null)}
+              className="absolute -top-12 right-0 bg-white/10 hover:bg-white/20 text-white w-10 h-10 rounded-full flex items-center justify-center transition-colors text-xl font-bold"
+            >
+              ×
+            </button>
+            <img
+              src={selectedImage.image}
+              onError={(e) =>
+                (e.target.src = 'https://placehold.co/800x600?text=Image+Unavailable')
+              }
+              className="w-full h-full object-contain rounded-lg"
+              alt={selectedImage.title}
+            />
+            <div className="absolute bottom-0 left-0 right-0 bg-black/70 text-white p-4 rounded-b-lg">
+              <h3 className="text-xl font-bold">{selectedImage.title}</h3>
+              <p className="text-sm opacity-80 mt-1">{selectedImage.description}</p>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }

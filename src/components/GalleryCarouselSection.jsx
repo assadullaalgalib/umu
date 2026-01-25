@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from "react";
 const galleryData = [
   {
     "id": 1,
-    "title": "Conference 2018 ",
-    "image": "/assets/gallery-01.jpg",
-    "thumbnail": "/assets/gallery-01-thumb.jpg",
+    "title": "World peace March in chechenia-2014",
+    "image": "/assets/gallery-078.jpg",
+    "thumbnail": "/assets/gallery-078-thumb.jpg",
     "description": "Highlights from our annual conference",
     "category": "events",
     "date": "2025-11-15",
@@ -16,9 +16,9 @@ const galleryData = [
   },
   {
     "id": 2,
-    "title": "Price ceremony Program",
-    "image": "/assets/gallery-02.jpg",
-    "thumbnail": "/assets/gallery-02-thumb.jpg",
+    "title": "Umu Headquarters in Moscow",
+    "image": "/assets/gallery-027.jpg",
+    "thumbnail": "/assets/gallery-027-thumb.jpg",
     "description": "Our team engaging with the community",
     "category": "community",
     "date": "2025-10-20",
@@ -55,9 +55,9 @@ const galleryData = [
   },
   {
     "id": 5,
-    "title": "Grand Mufti of  Al-AQSA giveing chest ",
-    "image": "/assets/gallery-05.jpg",
-    "thumbnail": "/assets/gallery-05-thumb.jpg",
+    "title": "Public Ceremony in Moscow",
+    "image": "/assets/gallery-081.jpg",
+    "thumbnail": "/assets/gallery-081-thumb.jpg",
     "description": "Annual charity drive supporting local causes",
     "category": "charity",
     "date": "2025-07-22",
