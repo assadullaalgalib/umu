@@ -11,10 +11,10 @@ export default function StatsSection() {
   useEffect(() => {
     const animateCounters = () => {
       const targets = {
-        muslims: 1900,
+        muslims: 2.0,
         countries: 63,
         united: 100,
-        initiatives: 50,
+        initiatives: 300,
       };
 
       const speed = 200;
@@ -66,7 +66,7 @@ export default function StatsSection() {
             {counters.united}%
           </h3>
           <p className="text-xs md:text-sm text-gray-500 font-bold uppercase tracking-wider mt-1">
-            Percent United
+            Stand on TAWHID
           </p>
         </div>
         <div className="text-center">

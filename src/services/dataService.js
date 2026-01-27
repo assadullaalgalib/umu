@@ -656,20 +656,28 @@ export const authAPI = {
   },
 
   /**
-   * Login user (demo mode - accepts any credentials)
+   * Login user (admin-only access)
    */
   async login(email, password) {
     if (!email || !password) throw new Error('Email and password required');
     
+    // Check for specific admin credentials
+    const adminEmail = 'assadullaalgalib12@gmail.com';
+    const adminPassword = 'umuAdmin!@#';
+    
+    if (email !== adminEmail || password !== adminPassword) {
+      throw new Error('Invalid email or password');
+    }
+    
     const user = {
-      id: 'user_' + Date.now(),
+      id: 'admin_' + Date.now(),
       email,
-      name: email.split('@')[0],
+      name: 'Admin',
       role: 'admin',
       loginTime: new Date().toISOString(),
     };
 
-    const token = 'token_' + Date.now();
+    const token = 'admin_token_' + Date.now();
     
     localStorage.setItem('authToken', token);
     localStorage.setItem('currentUser', JSON.stringify(user));

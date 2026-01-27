@@ -73,6 +73,29 @@ const AboutPage = ({ onNavigate }) => {
         </div>
       </div>
 
+      {/* Download Our Journey PDF */}
+      <div className="py-20 border-b border-gray-200">
+        <div className="container mx-auto px-4 max-w-6xl text-center">
+          <h2 className="text-3xl md:text-4xl font-black text-primary mb-8">
+            You Can Read More About United Muslim Ummah
+          </h2>
+          <p className="text-gray-700 text-lg mb-8 leading-relaxed max-w-2xl mx-auto">
+            For a detailed overview of our history, achievements, and future plans, download our comprehensive outlining the journey of United Muslim Ummah.
+          </p>
+          <a
+            href="/documents/our-journey.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition-all shadow-lg hover:shadow-xl"
+          >
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+            </svg>
+            Download PDF
+          </a>
+        </div>
+      </div>
+
       {/* Membership */}
       <div className="py-20 border-b border-gray-200">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -165,32 +188,7 @@ const AboutPage = ({ onNavigate }) => {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {/* Mission Card */}
-            <div className="bg-white rounded-2xl shadow-lg p-10 hover:shadow-xl transition-all">
-              <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mb-6">
-                <svg className="w-8 h-8 text-primary-dark" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-              <h3 className="text-2xl font-bold text-primary mb-4">Our Mission</h3>
-              <p className="text-gray-700 text-lg leading-relaxed mb-6">
-                To free and salvage the world humanity form all evil, to be united all the Muslims and Non-Muslim. Our main objective is to establish unity, solidarity and brotherhood among the muslims of the world. Our task is to keep peace and tranquillity to protect spiritual values and the unity, to establish peace, happiness and prosperity all over the Muslim and Non- Muslim territories of the world. Taking proper measures for realization of women's rights indicated in Islam. To Improving of public opinion against terrorism, war, aggression, violation, Mass produce weapons also against homosexuality, to save universal family system in the world.
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="text-gold font-bold text-xl">→</span>
-                  <span className="text-gray-700">Foster global Muslim unity and cooperation</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gold font-bold text-xl">→</span>
-                  <span className="text-gray-700">Strengthen voice in international affairs</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-gold font-bold text-xl">→</span>
-                  <span className="text-gray-700">Address global challenges collaboratively</span>
-                </li>
-              </ul>
-            </div>
+           
 
             {/* Vision Card */}
             <div className="bg-white rounded-2xl shadow-lg p-10 hover:shadow-xl transition-all">
@@ -216,6 +214,33 @@ const AboutPage = ({ onNavigate }) => {
                 <li className="flex items-start gap-3">
                   <span className="text-gold font-bold text-xl">→</span>
                   <span className="text-gray-700">Inclusive and equitable global society</span>
+                </li>
+              </ul>
+            </div>
+
+             {/* Mission Card */}
+            <div className="bg-white rounded-2xl shadow-lg p-10 hover:shadow-xl transition-all">
+              <div className="w-16 h-16 bg-gold/20 rounded-full flex items-center justify-center mb-6">
+                <svg className="w-8 h-8 text-primary-dark" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-2xl font-bold text-primary mb-4">Our Mission</h3>
+              <p className="text-gray-700 text-lg leading-relaxed mb-6">
+                To free and salvage the world humanity form all evil, to be united all the Muslims and Non-Muslim. Our main objective is to establish unity, solidarity and brotherhood among the muslims of the world. Our task is to keep peace and tranquillity to protect spiritual values and the unity, to establish peace, happiness and prosperity all over the Muslim and Non- Muslim territories of the world. Taking proper measures for realization of women's rights indicated in Islam. To Improving of public opinion against terrorism, war, aggression, violation, Mass produce weapons also against homosexuality, to save universal family system in the world.
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-3">
+                  <span className="text-gold font-bold text-xl">→</span>
+                  <span className="text-gray-700">Foster global Muslim unity and cooperation</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-gold font-bold text-xl">→</span>
+                  <span className="text-gray-700">Strengthen voice in international affairs</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <span className="text-gold font-bold text-xl">→</span>
+                  <span className="text-gray-700">Address global challenges collaboratively</span>
                 </li>
               </ul>
             </div>
@@ -286,7 +311,7 @@ const AboutPage = ({ onNavigate }) => {
         </div>
       </div>
 
-      {/* History & Development */}
+      {/* Our Journey */}
       <div className="py-20 bg-sky-light border-b border-gray-200">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-black text-center text-primary mb-16">
@@ -342,6 +367,37 @@ const AboutPage = ({ onNavigate }) => {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Our Flag */}
+      <div className="py-20 border-b border-gray-200">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-black text-center text-primary mb-16">
+            Flag of United Muslim Ummah
+          </h2>
+
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
+              <div className="mb-8">
+                <img
+                  src="/assets/umu-flag.png"
+                  alt="United Muslim Ummah Flag"
+                  className="w-full max-w-md mx-auto rounded-lg shadow-md"
+                  onError={(e) => e.target.src = '/assets/gallery-093.jpg'}
+                />
+              </div>
+
+              <div className="text-left max-w-2xl mx-auto">
+                <h3 className="text-2xl font-bold text-primary mb-6 text-center">
+                  United Muslim Ummah has own Flag
+                </h3>
+                <p className="text-gray-700 text-lg leading-relaxed">
+                  The organization has a own flag on white cloth. At the top center of the flag in Arabic "La-ilaha illallah Muhammadur rasulullah (PBUH)" and in the light of Sharia, the downward vertical light is illuminating the world. The flag is a symbol of world peace.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

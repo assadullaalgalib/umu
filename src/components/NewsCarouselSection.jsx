@@ -1,7 +1,20 @@
-import { useState, useEffect } from 'react';
-import { newsAPI } from '../services/dataService';
+import { useEffect, useState } from 'react';
 
 const newsData = [
+  {
+    "id": 5,
+    "title": "Heavy World Conscience in the Cries of the Innocent",
+    "date": "2026-01-27",
+    "author": "United Muslim Ummah",
+    "summary": "The ongoing violence in Gaza is severely affecting children and civilians, shaking global conscience",
+    "content": "The ongoing violence and military operations in Gaza Strip are increasing the suffering of ordinary people day by day. Especially the pain and cries of children are shaking the world conscience. Terrified faces amidst the ruins, the cries of injured children, and the pain of losing family—these scenes are today a reflection of a horrific humanitarian crisis.\n\nIn various photos that have been circulating recently, it can be seen that countless children are being injured due to shelling and attacks, some are losing parents, some are losing homes. School-going children don't have books and notebooks in their hands today, they have fear and uncertainty. Due to lack of safe shelter, many families are forced to spend days under the open sky.\n\nInternational human rights organizations are repeatedly warning that international humanitarian laws are being violated in this conflict and children's protection is under extreme threat. The crisis of food, water, medical care and shelter is becoming more acute day by day. Hospitals are facing shortage of necessary medicines and medical equipment.\n\nHuman rights activists are calling on world leaders and international community to immediately stop the violence and ensure humanitarian assistance. At the same time, demands have been raised to strengthen initiatives for ceasefire and peaceful solutions.\n\nMay the tears in the eyes of innocent children and the suffering of helpless people not remain confined to pictures only—this is a difficult question for world humanity. Only the establishment of peace and justice can show the way to liberation from this humanitarian disaster.",
+    "image": "/assets/gallery-066.jpg",
+    "featured": true,
+    "enabled": true,
+    "category": "humanitarian",
+    "views": 2500,
+    "likes": 890
+  },
   {
     "id": 1,
     "title": "Latest Innovation in Islamic Education",

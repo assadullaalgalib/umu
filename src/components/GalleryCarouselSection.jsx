@@ -17,8 +17,8 @@ const galleryData = [
   {
     "id": 2,
     "title": "Umu Headquarters in Moscow",
-    "image": "/assets/gallery-027.jpg",
-    "thumbnail": "/assets/gallery-027-thumb.jpg",
+    "image": "/assets/gallery-0142.jpg",
+    "thumbnail": "/assets/gallery-0142-thumb.jpg",
     "description": "Our team engaging with the community",
     "category": "community",
     "date": "2025-10-20",

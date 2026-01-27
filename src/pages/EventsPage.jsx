@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-import { eventsAPI } from "../services/dataService";
-import Header from "../components/Header";
+import { useEffect, useState } from "react";
 
 const eventsData = [
   {
@@ -18,7 +16,8 @@ const eventsData = [
     "priority": "low",
     "capacity": 500,
     "registered": 234,
-    "category": "conference"
+    "category": "conference",
+    "pdf": "/documents/islamic-conference-2026.pdf"
   },
   {
     "id": 2,
@@ -35,7 +34,8 @@ const eventsData = [
     "priority": "mid",
     "capacity": 100,
     "registered": 87,
-    "category": "workshop"
+    "category": "workshop",
+    "pdf": "/documents/youth-workshop-2026.pdf"
   },
   {
     "id": 3,
@@ -52,7 +52,8 @@ const eventsData = [
     "priority": "mid",
     "capacity": 200,
     "registered": 145,
-    "category": "volunteer"
+    "category": "volunteer",
+    "pdf": "/documents/community-service-2026.pdf"
   },
   {
   "id": 4,
@@ -69,7 +70,8 @@ const eventsData = [
   "priority": "high",
   "capacity": 150,
   "registered": 98,
-  "category": "networking"
+  "category": "networking",
+  "pdf": "/documents/halal-expo-2026.pdf"
   },
   {
     "id": 5,
@@ -86,7 +88,8 @@ const eventsData = [
     "priority": "low",
     "capacity": 500,
     "registered": 234,
-    "category": "conference"
+    "category": "conference",
+    "pdf": "/documents/islamic-conference-2026.pdf"
   }
 ];
 
@@ -95,6 +98,15 @@ export function EventsPage() {
   const [events, setEvents] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [pdfModal, setPdfModal] = useState({ isOpen: false, pdfUrl: null, title: null });
+
+  const openPdfModal = (pdfUrl, title) => {
+    setPdfModal({ isOpen: true, pdfUrl, title });
+  };
+
+  const closePdfModal = () => {
+    setPdfModal({ isOpen: false, pdfUrl: null, title: null });
+  };
 
   const loadEvents = async () => {
     try {
@@ -173,18 +185,106 @@ export function EventsPage() {
           {filtered.map((e, i) => (
             <div
               key={i}
-              className="bg-white p-6 rounded-xl shadow-md"
+              className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all"
             >
-              <h3 className="font-bold text-primary text-lg">
+              <div className="mb-4">
+                <img
+                  src={e.image}
+                  alt={e.title}
+                  className="w-full h-48 object-cover rounded-lg"
+                  onError={(e) => {
+                    e.target.src = '/assets/event-placeholder.jpg';
+                  }}
+                />
+              </div>
+              <h3 className="font-bold text-primary text-lg mb-2">
                 {e.title}
               </h3>
-              <p className="text-sm text-gray-500 mt-2 capitalize">
-                {e.type} event
+              <div className="text-sm text-gray-600 mb-2">
+                <p><strong>Date:</strong> {new Date(e.date).toLocaleDateString()}</p>
+                <p><strong>Time:</strong> {e.time}</p>
+                <p><strong>Location:</strong> {e.location}</p>
+              </div>
+              <p className="text-sm text-gray-500 mb-3 capitalize">
+                Status: {e.status} | Category: {e.category}
               </p>
+              <p className="text-gray-700 text-sm mb-4 line-clamp-3">
+                {e.title.includes("Bangladesh Halal Expo") ? (
+                  <div dangerouslySetInnerHTML={{ __html: e.content }} />
+                ) : (
+                  e.description
+                )}
+              </p>
+              {e.pdf && (
+                <button
+                  onClick={() => openPdfModal(e.pdf, e.title)}
+                  className="inline-flex items-center gap-2 bg-primary text-white px-4 py-2 rounded-lg font-semibold hover:bg-primary-dark transition-colors text-sm mb-3"
+                >
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                    </svg>
+                    View PDF
+                  </button>
+
+              )}
+              <div className="flex justify-between items-center text-xs text-gray-500">
+                <span>Capacity: {e.capacity}</span>
+                <span>Registered: {e.registered}</span>
+              </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* PDF Modal */}
+      {pdfModal.isOpen && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={closePdfModal} />
+          <div className="bg-white rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-hidden relative z-10 shadow-2xl">
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <h3 className="text-xl font-bold text-primary">{pdfModal.title} - PDF Document</h3>
+              <button
+                onClick={closePdfModal}
+                className="w-10 h-10 rounded-full flex items-center justify-center hover:bg-gray-100 transition-colors text-gray-500 hover:text-gray-700"
+              >
+                ✕
+              </button>
+            </div>
+            <div className="p-6">
+              <div className="flex gap-4 mb-4">
+                <a
+                  href={pdfModal.pdfUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M14,2H6A2,2 0 0,0 4,4V20A2,2 0 0,0 6,22H18A2,2 0 0,0 20,20V8L14,2M18,20H6V4H13V9H18V20Z" />
+                  </svg>
+                  Open in New Tab
+                </a>
+                <a
+                  href={pdfModal.pdfUrl}
+                  download
+                  className="inline-flex items-center gap-2 bg-green-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M5,20H19V18H5M19,9H15V3H9V9H5L12,16L19,9Z" />
+                  </svg>
+                  Download PDF
+                </a>
+              </div>
+              <div className="border border-gray-200 rounded-lg overflow-hidden">
+                <iframe
+                  src={pdfModal.pdfUrl}
+                  className="w-full h-[600px]"
+                  title={`${pdfModal.title} PDF`}
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 }
