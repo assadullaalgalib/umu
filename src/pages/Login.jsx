@@ -28,7 +28,7 @@ export default function Login() {
         return;
       }
 
-      const result = await authAPI.login(formData.email, formData.password);
+      await authAPI.login(formData.email, formData.password);
       navigate('/dashboard');
     } catch (err) {
       setError(err.message || 'An error occurred. Please try again.');

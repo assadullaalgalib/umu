@@ -3,6 +3,7 @@ import Modal from './Modal';
 
 const AboutPage = ({ onNavigate }) => {
   const [selectedLeader, setSelectedLeader] = useState(null);
+  const [selectedMember, setSelectedMember] = useState(null);
 
   return (
     <section className="min-h-screen bg-white">
@@ -576,7 +577,7 @@ const AboutPage = ({ onNavigate }) => {
                   title: "President",
                   description: "Strategic leadership and organizational oversight",
                   color: "from-blue-500 to-blue-600",
-                  image: "https://via.placeholder.com/400x200?text=Madzhumder+Muhammad+Amin"
+                  image: "/assets/amin.jpg"
                 },
                 {
                   name: "Khan Tipu Sultan",
@@ -590,35 +591,35 @@ const AboutPage = ({ onNavigate }) => {
                   title: "centeral Baitul Mokaram Mosque and Senior Vice-President",
                   description: "Deputy leadership and special initiatives coordination",
                   color: "from-green-500 to-green-600",
-                  image: "https://via.placeholder.com/400x200?text=Obaidul+Haq+Nodhovi"
+                  image: "/assets/obidul Haq.jpg"
                 },
                 {
                   name: "Musa Al Hafiz",
                   title: "Senior Vice-President",
                   description: "Deputy leadership and special initiatives coordination",
                   color: "from-green-500 to-green-600",
-                  image: "https://via.placeholder.com/400x200?text=Musa+Al+Hafiz"
+                  image: "/assets/Musa al hafiz.jpg"
                 },
                 {
                   name: "Prof.Dr.Rakibul Haque",
                   title: "Charment Dept of Mis in Dhaka University and  Vice-President",
                   description: "Deputy leadership and special initiatives coordination",
                   color: "from-green-500 to-green-600",
-                  image: "https://via.placeholder.com/400x200?text=Prof.Dr.Rakibul+Haque"
+                  image: "/assets/Rakibul islam.jpeg"
                 },
                 {
                   name: "Professor Dr. Kamrul Hasan",
                   title: "Vice President & Chairman, Education and Research Committee",
                   description: "Leading education initiatives and research coordination",
                   color: "from-lime-500 to-lime-600",
-                  image: "https://via.placeholder.com/400x200?text=Professor+Dr.+Kamrul+Hasan"
+                  image: "/assets/kamrul hassan.jpg"
                 },
                 {
                   name: "Professor Dr. Ariful Islam",
                   title: "Assistant Professor, University of Dhaka & Vice President, UMU",
                   description: "Academic leadership and vice presidential duties",
                   color: "from-yellow-500 to-yellow-600",
-                  image: "https://via.placeholder.com/400x200?text=Professor+Dr.+Ariful+Islam"
+                  image: "/assets/gallery-03.jpg"
                 },
                 {
                   name: "Mohammad Nurul Alam Bhuiyan",
@@ -632,21 +633,21 @@ const AboutPage = ({ onNavigate }) => {
                   title: "Secretary General",
                   description: "Overseeing administrative operations and executive coordination",
                   color: "from-teal-500 to-teal-600",
-                  image: "https://via.placeholder.com/400x200?text=Mufti+Mohammad+Osman+Goni"
+                  image: "/assets/Mufti osman goni.jpeg"
                 },
                 {
                   name: "Shahadat Yousuf",
                   title: "Assistant Secretary General",
                   description: "Supporting administrative functions and executive assistance",
                   color: "from-cyan-500 to-cyan-600",
-                  image: "https://via.placeholder.com/400x200?text=Shahadat+Yousuf"
+                  image: "/assets/shahadat Yousuf.jpg"
                 },
                 {
                   name: "Nizam Uddin",
                   title: "Director of Press & Publication",
                   description: "Media relations and publication management",
                   color: "from-orange-500 to-orange-600",
-                  image: "https://via.placeholder.com/400x200?text=Nizam+Uddin"
+                  image: "/assets/nizam uddin.jpg"
                 },
                 {
                   name: "Arafat Hasnain",
@@ -707,11 +708,12 @@ const AboutPage = ({ onNavigate }) => {
               ].map((member, index) => (
                 <div
                   key={index}
-                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all"
+                  onClick={() => setSelectedMember(member)}
+                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all h-96 flex flex-col cursor-pointer"
                 >
-                  <img src={member.image} alt={member.name} className="w-full h-24 object-cover" />
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-primary mb-1">{member.name}</h3>
+                  <img src={member.image} alt={member.name} className="w-full h-48 object-cover" />
+                  <div className="p-6 flex-1">
+                    <h3 className="text-2xl font-bold text-primary mb-1">{member.name}</h3>
                     <p className="text-gold font-bold mb-3">{member.title}</p>
                     <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
                   </div>
@@ -1008,6 +1010,52 @@ const AboutPage = ({ onNavigate }) => {
             </div>
           </div>
         </Modal>
+      )}
+
+      {/* Member Detail Modal */}
+      {selectedMember && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center p-4" onClick={() => setSelectedMember(null)}>
+          <div className="absolute inset-0 bg-black/80 backdrop-blur-sm" onClick={() => setSelectedMember(null)} />
+          <div className="bg-white rounded-2xl p-8 max-w-2xl mx-auto relative z-10" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setSelectedMember(null)}
+              className="absolute top-4 right-4 bg-white/90 w-10 h-10 rounded-full flex items-center justify-center hover:bg-white transition-colors text-primary font-bold text-xl shadow-md z-20"
+            >
+              &times;
+            </button>
+            <div className="flex items-start gap-6 mb-8">
+              <img src={selectedMember.image} alt={selectedMember.name} className="w-28 h-28 object-cover rounded-full flex-shrink-0" />
+              <div className="flex-1">
+                <h2 className="text-3xl font-bold text-primary mb-2">{selectedMember.name}</h2>
+                <p className="text-xl text-gold font-bold mb-1">{selectedMember.title}</p>
+              </div>
+            </div>
+
+            <div className="bg-sky-light rounded-xl p-6 mb-6">
+              <p className="text-gray-700 text-lg leading-relaxed">
+                {selectedMember.description}
+              </p>
+            </div>
+
+            <div className="flex gap-4 justify-end">
+              <button
+                onClick={() => setSelectedMember(null)}
+                className="px-6 py-2 bg-gray-200 text-gray-800 rounded-lg font-bold hover:bg-gray-300 transition-colors"
+              >
+                Close
+              </button>
+              <button
+                onClick={() => {
+                  setSelectedMember(null);
+                  onNavigate('contact');
+                }}
+                className="px-6 py-2 bg-primary text-white rounded-lg font-bold hover:bg-primary-dark transition-colors"
+              >
+                Contact Us
+              </button>
+            </div>
+          </div>
+        </div>
       )}
     </section>
   );

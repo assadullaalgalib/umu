@@ -39,7 +39,7 @@ const eventsData = [
 ];
 
 
-export default function LatestEventSection({ onOpenModal = () => {}, onNavigate = () => {} }) {
+export default function LatestEventSection({ onOpenModal = () => {} }) {
   const [event, setEvent] = useState(null);
   const [loading, setLoading] = useState(true);
 

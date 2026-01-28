@@ -13,7 +13,6 @@ export default function Dashboard() {
   const [events, setEvents] = useState([]);
   const [gallery, setGallery] = useState([]);
   const [news, setNews] = useState([]);
-  const [aboutContent, setAboutContent] = useState(null);
   const [showMobileNav, setShowMobileNav] = useState(false);
   const [actionLoading, setActionLoading] = useState(false);
   const [actionMessage, setActionMessage] = useState(null);
@@ -27,9 +26,6 @@ export default function Dashboard() {
     title: '', summary: '', content: '', author: ''
   });
   const [editingNews, setEditingNews] = useState(null);
-  const [aboutForm, setAboutForm] = useState({
-    whoWeAre: '', mission: '', vision: ''
-  });
   const [editingGallery, setEditingGallery] = useState(null);
   const [galleryForm, setGalleryForm] = useState({
     title: '', description: ''

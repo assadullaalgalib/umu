@@ -1,152 +1,12 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Pagination from './Pagination';
-
-const eventsData = [
-  {
-    "id": 1,
-    "title": "Qur'an Recitation Competition",
-    "date": "2026-01-26",
-    "time": "10:00 AM",
-    "location": "Dhaka Convention Center",
-    "description": "The Moral Impact of the 'Al-Qur'an Meaning-Based Reading Competition' Behind the Victory of DUCSU Leaders - A transformative initiative fostering ethical awareness and leadership among young minds.",
-    "content": "The Moral Impact of the 'Al-Qur'an Meaning-Based Reading Competition' Behind the Victory of DUCSU Leaders<br/><br/>Dhaka University Correspondent:<br/><br/>In the recent Dhaka University Central Students' Union (DUCSU) election, several victorious student leaders have identified the 'Al-Qur'an Meaning-Based Reading Competition' as a key source of their intellectual growth, moral development, and inner self-reflection. This initiative—religious in nature yet deeply contemplative—has drawn attention for its role in nurturing ethical awareness and a sense of responsibility among young people.<br/><br/>Analysts believe that such programs at the university level not only enhance religious understanding but also prepare students for social and political responsibility.<br/><br/><strong>Qur'anic Message and the Sense of Leadership</strong><br/><br/>One of the key organizers of the Al-Qur'an Meaning-Based Reading Competition stated:<br/><br/>'Our aim was not merely for students to recite the Qur'an, but to understand its meanings and messages. Because for leadership, the most essential qualities are ethical thinking and self-discipline.'<br/><br/>Students and teachers from various higher educational institutions across the country—including the University of Dhaka, BUET, and Dhaka Medical College—participated in the competition. According to the organizers, participants were encouraged to explore the connection between Qur'anic principles and real-life challenges.<br/><br/>A participating student shared:<br/><br/>'To engage in politics or leadership, one must have a strong ideological foundation. This competition taught me that leadership means a spirit of service, standing against injustice, and working for the welfare of humanity.'<br/><br/><strong>The Connection Between Thought, Ethics, and Inner Awakening</strong><br/><br/>A section of the university's academic community believes that the Al-Qur'an Meaning-Based Reading Competition has contributed significantly to moral practice and inner awakening among students.<br/><br/>A faculty member from the Department of Islamic History and Culture at the University of Dhaka commented:<br/><br/>'A generation that understands religion thoughtfully tends to play a responsible role in society. The emergence of such students in DUCSU leadership signals a positive change.'<br/><br/>Observations among students suggest that the competition has helped cultivate discipline, empathy, and sound decision-making skills. Even in a politically turbulent environment, students are showing growing interest in practicing value-based leadership.<br/><br/><strong>Moral Direction for a New Generation</strong><br/><br/>Many university teachers and alumni believe that the Al-Qur'an Meaning-Based Reading Competition has provided a new moral and intellectual direction for young people. It has evolved beyond a purely religious activity into a training ground for principled leadership.<br/><br/>In this context, several DUCSU election winners have openly acknowledged that their experiences in various competitions and initiatives organized by non-political organizations—such as United Muslim Ummah, Dawah Association, and Dawah Circle—have strengthened their confidence, reasoning ability, and moral values.<br/><br/><strong>Conclusion</strong><br/><br/>For a long time, DUCSU elections were synonymous with political tension, conflict, and intense rivalry. However, the changes observed in recent times may be rooted in such ethical and contemplative initiatives.<br/><br/>While the Al-Qur'an Meaning-Based Reading Competition may not be a center of political influence, its light has illuminated the hearts of many young leaders igniting the lamp of justice, ideals, and morality within them.",
-    "image": "/assets/Quran compt.png.webp",
-    "featured": true,
-    "enabled": true,
-    "status": "ongoing",
-    "priority": "high",
-    "capacity": 300,
-    "registered": 150,
-    "category": "competition"
-  },
-  {
-    "id": 2,
-    "title": "Palestine Program",
-    "date": "2025-12-15",
-    "time": "6:00 PM",
-    "location": "Community Hall",
-    "description": "Educational program raising awareness about Palestine and supporting humanitarian efforts",
-    "content": "An informative session about the current situation in Palestine, featuring guest speakers, documentaries, and fundraising for humanitarian aid.",
-    "image": "/assets/gallery-068.jpg",
-    "featured": false,
-    "enabled": true,
-    "status": "previous",
-    "priority": "mid",
-    "capacity": 200,
-    "registered": 180,
-    "category": "educational"
-  },
-  {
-    "id": 3,
-    "title": "Islamic Conference",
-    "date": "2025-11-20",
-    "time": "9:00 AM",
-    "location": "Grand Ballroom",
-    "description": "Annual Islamic conference discussing contemporary issues and solutions",
-    "content": "Scholars and community leaders gathered to discuss pressing issues facing Muslim communities worldwide, including education, social welfare, and technological advancement.",
-    "image": "/assets/gallery-070.jpg",
-    "featured": true,
-    "enabled": true,
-    "status": "previous",
-    "priority": "high",
-    "capacity": 500,
-    "registered": 450,
-    "category": "conference"
-  },
-  {
-    "id": 4,
-    "title": "Ummah Cultural Centre",
-    "date": "2025-10-10",
-    "time": "2:00 PM",
-    "location": "Cultural Centre",
-    "description": "Opening ceremony of the new Ummah Cultural Centre facility",
-    "content": "Celebrating the inauguration of our new cultural centre with traditional performances, exhibitions, and community gatherings.",
-    "image": "/assets/gallery-0138.jpg",
-    "featured": false,
-    "enabled": true,
-    "status": "previous",
-    "priority": "mid",
-    "capacity": 400,
-    "registered": 350,
-    "category": "cultural"
-  },
-  {
-    "id": 5,
-    "title": "Ummah Library",
-    "date": "2025-09-05",
-    "time": "11:00 AM",
-    "location": "Library Building",
-    "description": "Grand opening of the Ummah Library with extensive Islamic literature collection",
-    "content": "The new library features thousands of books on Islamic studies, history, and contemporary issues, available for community members.",
-    "image": "/assets/event-02.jpg",
-    "featured": false,
-    "enabled": true,
-    "status": "previous",
-    "priority": "low",
-    "capacity": 150,
-    "registered": 120,
-    "category": "educational"
-  },
-  {
-    "id": 6,
-    "title": "Ummah Scholarship Program",
-    "date": "2025-08-15",
-    "time": "4:00 PM",
-    "location": "Education Centre",
-    "description": "Announcement and distribution of scholarships for deserving students",
-    "content": "Recognizing academic excellence and providing financial support for students pursuing Islamic education and related fields.",
-    "image": "/assets/event-03.jpg",
-    "featured": false,
-    "enabled": true,
-    "status": "previous",
-    "priority": "mid",
-    "capacity": 100,
-    "registered": 80,
-    "category": "educational"
-  },
-  {
-    "id": 7,
-    "title": "Al-Qur'an Distribution Program",
-    "date": "2025-07-20",
-    "time": "10:00 AM",
-    "location": "Mosque Premises",
-    "description": "Mass distribution of Al-Qur'an copies to community members",
-    "content": "Providing free copies of the Holy Qur'an to households and individuals, ensuring accessibility to Islamic teachings.",
-    "image": "/assets/gallery-031.jpg",
-    "featured": false,
-    "enabled": true,
-    "status": "previous",
-    "priority": "low",
-    "capacity": 250,
-    "registered": 200,
-    "category": "religious"
-  },
-  {
-    "id": 8,
-    "title": "Bangladesh Halal Expo - 2026",
-    "date": "2026-05-07",
-    "time": "7-9 May 2026",
-    "location": "China Bangladesh Friendship Conference Center",
-    "description": "Principal Organizer & Host: United Muslim Ummah Foundation. Venue: Bangladesh China Friendship Conference Center. Date: 7–8–9th of May 2026. Meeting Point of the Global Halal Economy - The largest international trade fair for halal products and services.",
-    "content": "Bangladesh Halal Expo 2026 stands as a trusted meeting point of the global halal economy, bringing together international exhibitors, buyers, innovators, and policymakers on one prestigious platform. Guided by the principles of halal, ethical trade, and sustainability, the Expo reflects a shared vision of inclusive growth and responsible commerce.<br/><div class='card about-highlights-card'><h4 style='color: var(--primary-green); margin-bottom: 15px; font-size: 1.4rem;'>2026 Highlights</h4><ul style='list-style: none'><li style='margin-bottom: 15px; display: flex; align-items: center'><span style='color: var(--gold); margin-right: 10px; font-size: 1.2rem;'>✓</span>15,000+ sqm International Exhibition Area</li><li style='margin-bottom: 15px; display: flex; align-items: center'><span style='color: var(--gold); margin-right: 10px; font-size: 1.2rem;'>✓</span>Participation from 40+ Countries</li><li style='margin-bottom: 15px; display: flex; align-items: center'><span style='color: var(--gold); margin-right: 10px; font-size: 1.2rem;'>✓</span>700+ Hosted International Buyers</li><li style='margin-bottom: 15px; display: flex; align-items: center'><span style='color: var(--gold); margin-right: 10px; font-size: 1.2rem;'>✓</span>Organized in collaboration with OIC-affiliated Institutions</li><li style='margin-bottom: 15px; display: flex; align-items: center'><span style='color: var(--gold); margin-right: 10px; font-size: 1.2rem;'>✓</span>Specialized Zones: NOV, Private Label &amp; SEFPEX</li><li style='margin-bottom: 15px; display: flex; align-items: center'><span style='color: var(--gold); margin-right: 10px; font-size: 1.2rem;'>✓</span>Platform for Global B2B Meetings &amp; Halal Trade Forums</li></ul></div>",
-    "image": "/assets/halal_expo.png",
-    "featured": true,
-    "enabled": true,
-    "status": "upcoming",
-    "priority": "high",
-    "capacity": 150,
-    "registered": 98,
-    "category": "networking",
-    "pdf": "/documents/halal-expo-2026.pdf"
-  }
-];
 
 export default function EventsPage({ onOpenModal = () => {} }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [filterStatus, setFilterStatus] = useState('all');
+  const [eventsData, setEventsData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [pdfModal, setPdfModal] = useState({ isOpen: false, pdfUrl: null, title: null });
-  // const [loading, setLoading] = useState(false);
-  // const [eventsData, setEventsData] = useState([]);
   const itemsPerPage = 6;
 
   const openPdfModal = (pdfUrl, title) => {
@@ -162,24 +22,25 @@ export default function EventsPage({ onOpenModal = () => {} }) {
       ? eventsData
       : eventsData.filter((event) => event.status === filterStatus);
   
-  //   const loadLatestEvent = async () => {
-  //       try {
-  //         const allEvents = await eventsAPI.getAllEvents();
-  //         const enabledEvents = allEvents.filter(e => e.enabled === true);
-          
-  //         if (enabledEvents.length > 0) {
-  //           setEventsData(enabledEvents);
-  //         }
-  //       } catch (err) {
-  //         console.error('Error loading latest event:', err);
-  //       } finally {
-  //         setLoading(false);
-  //       }
-  //     };
-    
-  // useEffect(() => {
-  //   loadLatestEvent();
-  // }, []);
+  const loadEvents = async () => {
+    try {
+      const response = await fetch('/data/events.json');
+      if (!response.ok) {
+        throw new Error('Failed to fetch events data');
+      }
+      const data = await response.json();
+      const enabledEvents = data.filter(event => event.enabled === true);
+      setEventsData(enabledEvents);
+    } catch (err) {
+      console.error('Error loading events:', err);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    loadEvents();
+  }, []);
 
   const startIdx = (currentPage - 1) * itemsPerPage;
   const paginatedEvents = filteredEvents.slice(
@@ -192,16 +53,16 @@ export default function EventsPage({ onOpenModal = () => {} }) {
     setCurrentPage(1);
   };
 
-  // if (loading || !eventsData) {
-  //   return (
-  //     <section className="container mx-auto px-4 py-24 max-w-6xl">
-  //       <div className="text-center">
-  //         <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-primary mx-auto mb-4"></div>
-  //         <p className="text-gray-600">Loading latest event...</p>
-  //       </div>
-  //     </section>
-  //   );
-  // }
+  if (loading || !eventsData) {
+    return (
+      <section className="container mx-auto px-4 py-24 max-w-6xl">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-primary mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading events...</p>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="min-h-screen">

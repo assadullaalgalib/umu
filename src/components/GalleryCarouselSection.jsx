@@ -68,7 +68,7 @@ const galleryData = [
   }
 ]
 
-function GalleryCarouselSection({ onNavigate = () => {} }) {
+function GalleryCarouselSection() {
   const carouselRef = useRef(null);
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true);
