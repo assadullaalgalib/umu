@@ -576,64 +576,20 @@ const AboutPage = ({ onNavigate }) => {
                   name: "Madzhumder Muhammad Amin",
                   title: "Founder President and Idea Maker of UMU",
                   description: `Ex-President, International Islamic Representative Organization (IIRO).
+
                   Member, Interethnic and Interfaith Commission of Russia under the President of the Russian Federation.
+
                   Chief Advisor (1994–1999), Friendship Committee with India, Bangladesh, Nepal, Maldives, and Pakistan, Russian State Duma.
+
                   Chief Editor, Journal “Migrants” (Russia), from 2007.
+
                   Chief Editor, Journal “Children’s Hope” (Russia), from 2007.
-                  Chairman (2007–2014), International Festival for Migrants of Russia.<br>
+
+                  Chairman (2007–2014), International Festival for Migrants of Russia.
                   Ex-President, Federation of Migrants of Russia.`,
 
                   color: "from-blue-500 to-blue-600",
                   image: "assets/amin vai 2.jpeg"
-                },
-                {
-                  name: "Khan Tipu Sultan",
-                  title: "Senior Vice-President",
-                  description: "Deputy leadership and special initiatives coordination",
-                  color: "from-green-500 to-green-600",
-                  image: "https://via.placeholder.com/400x200?text=Khan+Tipu+Sultan"
-                },
-                {
-                  name: "Obaidul Haq Nodhovi",
-                  title: "centeral Baitul Mokaram Mosque and Senior Vice-President",
-                  description: "Deputy leadership and special initiatives coordination",
-                  color: "from-green-500 to-green-600",
-                  image: "/assets/obidul Haq.jpg"
-                },
-                {
-                  name: "Musa Al Hafiz",
-                  title: "Senior Vice-President",
-                  description: "Deputy leadership and special initiatives coordination",
-                  color: "from-green-500 to-green-600",
-                  image: "/assets/Musa al hafiz.jpg"
-                },
-                {
-                  name: "Prof.Dr.Rakibul Haque",
-                  title: "Charment Dept of Mis in Dhaka University and  Vice-President",
-                  description: "Deputy leadership and special initiatives coordination",
-                  color: "from-green-500 to-green-600",
-                  image: "/assets/Rakibul islam.jpeg"
-                },
-                {
-                  name: "Professor Dr. Kamrul Hasan",
-                  title: "Vice President & Chairman, Education and Research Committee",
-                  description: "Leading education initiatives and research coordination",
-                  color: "from-lime-500 to-lime-600",
-                  image: "/assets/kamrul hassan.jpg"
-                },
-                {
-                  name: "Professor Dr. Ariful Islam",
-                  title: "Assistant Professor, University of Dhaka & Vice President, UMU",
-                  description: "Academic leadership and vice presidential duties",
-                  color: "from-yellow-500 to-yellow-600",
-                  image: "/assets/gallery-03.jpg"
-                },
-                {
-                  name: "Mohammad Nurul Alam Bhuiyan",
-                  title: "Secretary General",
-                  description: "General administration and executive operations",
-                  color: "from-purple-500 to-purple-600",
-                  image: "https://via.placeholder.com/400x200?text=Mohammad+Nurul+Alam+Bhuiyan"
                 },
                 {
                   name: "Mufti Mohammad Osman Goni",
@@ -643,6 +599,55 @@ const AboutPage = ({ onNavigate }) => {
                   image: "/assets/Mufti osman goni.jpeg"
                 },
                 {
+                  name: "Khan Tipu Sultan",
+                  title: "Senior Vice-President",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "assets/MEN in muslim.webp"
+                },
+                {
+                  name: "Hafez Maulana Muhibullahil Baki Nodovi",
+                  title: "Pesh Imam of the Central Baitul Mokarram Mosque and Senior Vice-President United Muslim Ummah",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "assets/MOHAMMAD-MUHIBULLAHIL-BAQEE.jpg"
+                },
+                {
+                  name: "Musa Al Hafiz",
+                  title: "Senior Vice-President United Muslim Ummah",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "/assets/Musa al hafiz.jpg"
+                },
+                {
+                  name: "Mufti Kazi Ibrahim",
+                  title: "Vice-President United Muslim Ummah",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "/assets/Mufti Kazi Ibrahim.jpeg"
+                },
+                {
+                  name: "Prof.Dr.Rakibul Haque",
+                  title: "Chairman Deptment of MIS,University of Dhaka and Vice-President United Muslim Ummah",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "/assets/Rakibul islam.jpeg"
+                },
+                {
+                  name: "Professor Dr. Kamrul Hasan",
+                  title: "Vice President United Muslim Ummah & Chairman, Education and Research,University of Dhaka",
+                  description: "Leading education initiatives and research coordination",
+                  color: "from-lime-500 to-lime-600",
+                  image: "/assets/kamrul hassan.jpg"
+                },
+                {
+                  name: "Professor Dr. Ariful Islam",
+                  title: "Assistant Professor, University of Dhaka & Vice President, UMU",
+                  description: "Academic leadership and vice presidential duties",
+                  color: "from-yellow-500 to-yellow-600",
+                  image: "/assets/Arif .jpeg"
+                },
+                {
                   name: "Shahadat Yousuf",
                   title: "Assistant Secretary General",
                   description: "Supporting administrative functions and executive assistance",
@@ -650,75 +655,26 @@ const AboutPage = ({ onNavigate }) => {
                   image: "/assets/shahadat Yousuf.jpg"
                 },
                 {
-                  name: "Nizam Uddin",
-                  title: "Director of Press & Publication",
-                  description: "Media relations and publication management",
-                  color: "from-orange-500 to-orange-600",
-                  image: "/assets/nizam uddin.jpg"
-                },
-                {
                   name: "Arafat Hasnain",
                   title: "Director of Finance",
                   description: "Financial management and resource allocation",
                   color: "from-red-500 to-red-600",
-                  image: "https://via.placeholder.com/400x200?text=Arafat+Hasnain"
-                },
-                {
-                  name: "Aminiah Asquarata",
-                  title: "Chairwoman, Women's Network",
-                  description: "Leading women's empowerment and network activities",
-                  color: "from-pink-500 to-pink-600",
-                  image: "https://via.placeholder.com/400x200?text=Aminiah+Asquarata"
-                },
-                {
-                  name: "S. M. Maruf Hasan Nirob",
-                  title: "Head, Young Network",
-                  description: "Managing youth programs and network development",
-                  color: "from-rose-500 to-rose-600",
-                  image: "assets/nirob.jpeg"
-                },
-                {
-                  name: "Aby Sayem",
-                  title: "Chairman, International Committee",
-                  description: "Overseeing international relations and committee affairs",
-                  color: "from-violet-500 to-violet-600",
-                  image: "https://via.placeholder.com/400x200?text=Aby+Sayem"
-                },
-                {
-                  name: "Shoid Ahmed Kayes",
-                  title: "Chairman, Human Rights Committee",
-                  description: "Advocating for human rights and committee leadership",
-                  color: "from-fuchsia-500 to-fuchsia-600",
-                  image: "https://via.placeholder.com/400x200?text=Shoid+Ahmed+Kayes"
-                },
-                {
-                  name: "Shofikur Rahman",
-                  title: "Chairman, Relief and Rehabilitation Committee",
-                  description: "Coordinating relief efforts and rehabilitation programs",
-                  color: "from-emerald-500 to-emerald-600",
-                  image: "https://via.placeholder.com/400x200?text=Shofikur+Rahman"
-                },
-                {
-                  name: "Mufti Mohammad Osman Goni",
-                  title: "Chairman, Ulama Committee",
-                  description: "Leading religious scholars and committee guidance",
-                  color: "from-slate-500 to-slate-600",
-                  image: "https://via.placeholder.com/400x200?text=Mufti+Mohammad+Osman+Goni"
+                  image: "assets/MEN in muslim.webp"
                 },
                 {
                   name: "Md. Abu Naser Khan",
                   title: "Executive Member",
                   description: "Additional executive support and coordination",
                   color: "from-indigo-500 to-indigo-600",
-                  image: "https://via.placeholder.com/400x200?text=Md.+Abu+Naser+Khan"
+                  image: "assets/MEN in muslim.webp"
                 }
               ].map((member, index) => (
                 <div
                   key={index}
                   onClick={() => setSelectedMember(member)}
-                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all h-96 flex flex-col cursor-pointer"
+                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all min-h-96 flex flex-col cursor-pointer"
                 >
-                  <img src={member.image} alt={member.name} className="w-full h-48 object-cover" />
+                  <img src={member.image} alt={member.name} className="w-48 h-48 object-cover rounded-full mx-auto mt-6 mb-4 shadow-lg" />
                   <div className="p-6 flex-1">
                     <h3 className="text-2xl font-bold text-primary mb-1">{member.name}</h3>
                     <p className="text-gold font-bold mb-3">{member.title}</p>
@@ -727,6 +683,290 @@ const AboutPage = ({ onNavigate }) => {
                 </div>
               ))}
             </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Sub-Committees */}
+      <div className="py-20 border-b border-gray-200">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-black text-center text-primary mb-16">
+            Sub-Committees
+          </h2>
+
+          <div className="space-y-12">
+            {[
+              {
+                name: "Ulama Committee",
+                president: "Mufti Mohammad Osman Goni",
+                presidentImage: "/assets/Mufti osman goni.jpeg",
+                vicePresident: "Deputy Chairman",
+                vicePresidentImage: "assets/MEN in muslim.webp",
+                description: "Leading religious scholars and committee guidance",
+                presidentTitle: "Chairman",
+                vicePresidentTitle: "Vice Chairman",
+                members: [
+                  { name: "Sheikh Ahmed Al-Rashid", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mufti Ibrahim Al-Hasan", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Omar Al-Farouq", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Imam Yusuf Al-Zahra", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Sheikh Khalid Al-Mansoori", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mufti Tariq Al-Siddiqui", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Hassan Al-Qurtubi", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Imam Saad Al-Riyadh", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Sheikh Fahad Al-Najdi", title: "Member", image: "assets/MEN in muslim.webp" }
+                ]
+              },
+              {
+                name: "Education and Research Committee",
+                president: "Professor Dr. Kamrul Hasan",
+                presidentImage: "/assets/kamrul hassan.jpg",
+                vicePresident: "Vice Chairman",
+                vicePresidentImage: "assets/MEN in muslim.webp",
+                description: "Leading education initiatives and research coordination",
+                presidentTitle: "Chairman",
+                vicePresidentTitle: "Vice Chairman",
+                members: [
+                  { name: "Dr. Aisha Rahman", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Professor Jamal Al-Karim", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Fatima Al-Zahra", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Ahmed Al-Masri", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Professor Layla Al-Hussein", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Omar Al-Sabah", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Sara Al-Fayed", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Professor Khalid Al-Rashid", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Nadia Al-Khalifa", title: "Member", image: "assets/MEN in muslim.webp" }
+                ]
+              },
+              {
+                name: "Human Rights Committee",
+                president: "Shoid Ahmed Kayes",
+                presidentImage: "assets/MEN in muslim.webp",
+                vicePresident: "Deputy Chairman",
+                vicePresidentImage: "assets/MEN in muslim.webp",
+                description: "Advocating for human rights and committee leadership",
+                presidentTitle: "Chairman",
+                vicePresidentTitle: "Vice Chairman",
+                members: [
+                  { name: "Dr. Amira Al-Jaber", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Hassan Al-Mahmoud", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Leila Al-Saud", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Tariq Al-Farsi", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Yasmin Al-Qatari", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Saad Al-Emirati", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Fatima Al-Bahraini", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Khalid Al-Omani", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Nour Al-Jordanian", title: "Member", image: "assets/MEN in muslim.webp" }
+                ]
+              },
+              {
+                name: "Relief and Rehabilitation Committee",
+                president: "Shofikur Rahman",
+                presidentImage: "assets/MEN in muslim.webp",
+                vicePresident: "Deputy Chairman",
+                vicePresidentImage: "assets/MEN in muslim.webp",
+                description: "Coordinating relief efforts and rehabilitation programs",
+                presidentTitle: "Chairman",
+                vicePresidentTitle: "Vice Chairman",
+                members: [
+                  { name: "Dr. Samira Al-Iraqi", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Ahmed Al-Syrian", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Hana Al-Lebanese", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Omar Al-Palestinian", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Layla Al-Afghani", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Jamal Al-Yemeni", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Amina Al-Somali", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Hassan Al-Sudanese", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Nadia Al-Egyptian", title: "Member", image: "assets/MEN in muslim.webp" }
+                ]
+              },
+              {
+                name: "International Committee",
+                president: "Aby Sayem",
+                presidentImage: "assets/MEN in muslim.webp",
+                vicePresident: "Deputy Chairman",
+                vicePresidentImage: "assets/MEN in muslim.webp",
+                description: "Overseeing international relations and committee affairs",
+                presidentTitle: "Chairman",
+                vicePresidentTitle: "Vice Chairman",
+                members: [
+                  { name: "Dr. Karim Al-Moroccan", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Leila Al-Tunisian", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Ahmed Al-Algerian", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Fatima Al-Libyan", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Omar Al-Mauritanian", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Sara Al-Chadian", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Jamal Al-Nigerian", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Hana Al-Malian", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Khalid Al-Senegalese", title: "Member", image: "assets/MEN in muslim.webp" }
+                ]
+              },
+              {
+                name: "Halal, Finance, and Banking Committee",
+                president: "Syed Sakhawatul Islam Ph.D",
+                presidentImage: "assets/MEN in muslim.webp",
+                vicePresident: "Deputy Chairman",
+                vicePresidentImage: "assets/MEN in muslim.webp",
+                description: "Overseeing halal finance and banking operations and compliance",
+                presidentTitle: "Chairman",
+                vicePresidentTitle: "Vice Chairman",
+                members: [
+                  { name: "Dr. Aisha Al-Kuwaiti", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Hassan Al-Qatari", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Fatima Al-Emirati", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Omar Al-Bahraini", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Layla Al-Omani", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Jamal Al-Saudi", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Sara Al-Jordanian", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mr. Khalid Al-Lebanese", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Nadia Al-Iraqi", title: "Member", image: "assets/MEN in muslim.webp" }
+                ]
+              },
+              {
+                name: "Young Network Committee",
+                president: "S. M. Maruf Hasan Nirob",
+                presidentImage: "assets/nirob.jpeg",
+                presidentTitle: "President",
+                secretaryGeneral: "Abu Naser Shifat ",
+                secretaryGeneralImage: "assets/shifat.jpeg",
+                secretaryGeneralTitle: "Secretary General",
+                vicePresident: "Saidul Hasan",
+                vicePresidentImage: "/public/assets/saidul hasan.jpeg",
+                vicePresidentTitle: "Vice President",
+                itHead: "Md Atiqur Rahman Rasel",
+                itHeadImage: "assets/Atiq.png",
+                itHeadTitle: "IT Head",
+                assistantHead: "MD ASSADULLA AL GALIB",
+                assistantHeadImage: "assets/Galib.png",
+                assistantHeadTitle: "Assistant IT Head",
+                description: "Managing youth programs and network development",
+                members: [
+                  { name: "Ahmed Al-Young", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Fatima Al-Active", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Omar Al-Energetic", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Layla Al-Innovative", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Jamal Al-Dynamic", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Sara Al-Motivated", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Khalid Al-Progressive", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Hana Al-Engaged", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Tariq Al-Visionary", title: "Member", image: "assets/MEN in muslim.webp" }
+                ]
+              },
+              {
+                name: "Women Network Committee",
+                president: "Khadijatul Kubra Tamima",
+                presidentImage: "assets/kadijatul.jpeg",
+                vicePresident: "Aminiah Asquarata",
+                vicePresidentImage: "assets/vc umu.jpeg",
+                description: "Leading women's empowerment and network activities",
+                presidentTitle: "President",
+                vicePresidentTitle: "Vice President",
+                members: [
+                  { name: "Aisha Poli", title: "Member", image: "assets/women.jpg" },
+                  { name: "Fatema Malik", title: "Member", image: "assets/women.jpg" },
+                  { name: "Nargish Akter", title: "Member", image: "assets/women.jpg" },
+                  { name: "Afroz Sultan", title: "Member", image: "assets/women.jpg" },
+                  { name: "Hana Al-Advocate", title: "Member", image: "assets/women.jpg" },
+                  { name: "Nadia Al-Pioneer", title: "Member", image: "assets/women.jpg" },
+                  { name: "Amira Al-Visionary", title: "Member", image: "assets/women.jpg" },
+                  { name: "Leila Al-Champion", title: "Member", image: "assets/women.jpg" },
+                  { name: "Yasmin Al-Innovator", title: "Member", image: "assets/women.jpg" }
+                ]
+              }
+            ].map((committee, index) => (
+              <div
+                key={index}
+                className="bg-white rounded-xl shadow-lg p-4"
+              >
+                <h3 className="text-lg font-bold text-primary mb-3 text-center">{committee.name}</h3>
+                <div className={`grid ${committee.name === "Young Network Committee" ? "md:grid-cols-3 lg:grid-cols-5" : "md:grid-cols-2"} gap-4 mb-3`}>
+                  <div className="text-center">
+                    <img
+                      src={committee.presidentImage}
+                      alt={committee.president}
+                      className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                      onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
+                    />
+                    <h4 className="text-sm font-bold text-gold mb-1">{committee.presidentTitle || "President"}</h4>
+                    <p className="text-gray-700 font-semibold text-xs">{committee.president}</p>
+                  </div>
+                  {committee.name === "Young Network Committee" && (
+                    <>
+                      <div className="text-center">
+                        <img
+                          src={committee.secretaryGeneralImage}
+                          alt={committee.secretaryGeneral}
+                          className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.secretaryGeneralTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.secretaryGeneral}</p>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={committee.vicePresidentImage}
+                          alt={committee.vicePresident}
+                          className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.vicePresident}</p>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={committee.itHeadImage}
+                          alt={committee.itHead}
+                          className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.itHeadTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.itHead}</p>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={committee.assistantHeadImage}
+                          alt={committee.assistantHead}
+                          className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.assistantHeadTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.assistantHead}</p>
+                      </div>
+                    </>
+                  )}
+                  {committee.name !== "Young Network Committee" && (
+                    <div className="text-center">
+                      <img
+                        src={committee.vicePresidentImage}
+                        alt={committee.vicePresident}
+                        className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                        onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
+                      />
+                      <h4 className="text-sm font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
+                      <p className="text-gray-700 font-semibold text-xs">{committee.vicePresident}</p>
+                    </div>
+                  )}
+                </div>
+                <p className="text-gray-600 leading-relaxed text-xs text-center">{committee.description}</p>
+                <div className="mt-6">
+                  <h4 className="text-md font-bold text-primary mb-4 text-center">Committee Members</h4>
+                  <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    {committee.members.map((member, idx) => (
+                      <div key={idx} className="text-center">
+                        <img
+                          src={member.image}
+                          alt={member.name}
+                          className="w-24 h-24 object-cover rounded-full mx-auto mb-2 shadow-md"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/96x96?text=Image+Not+Found'}
+                        />
+                        <h5 className="text-xs font-bold text-gold mb-1">{member.title}</h5>
+                        <p className="text-gray-700 font-semibold text-xs">{member.name}</p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
