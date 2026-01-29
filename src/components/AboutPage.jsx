@@ -574,10 +574,17 @@ const AboutPage = ({ onNavigate }) => {
               {[
                 {
                   name: "Madzhumder Muhammad Amin",
-                  title: "President",
-                  description: "Strategic leadership and organizational oversight",
+                  title: "Founder President and Idea Maker of UMU",
+                  description: `Ex-President, International Islamic Representative Organization (IIRO).
+                  Member, Interethnic and Interfaith Commission of Russia under the President of the Russian Federation.
+                  Chief Advisor (1994–1999), Friendship Committee with India, Bangladesh, Nepal, Maldives, and Pakistan, Russian State Duma.
+                  Chief Editor, Journal “Migrants” (Russia), from 2007.
+                  Chief Editor, Journal “Children’s Hope” (Russia), from 2007.
+                  Chairman (2007–2014), International Festival for Migrants of Russia.<br>
+                  Ex-President, Federation of Migrants of Russia.`,
+
                   color: "from-blue-500 to-blue-600",
-                  image: "/assets/amin.jpg"
+                  image: "assets/amin vai 2.jpeg"
                 },
                 {
                   name: "Khan Tipu Sultan",
@@ -668,7 +675,7 @@ const AboutPage = ({ onNavigate }) => {
                   title: "Head, Young Network",
                   description: "Managing youth programs and network development",
                   color: "from-rose-500 to-rose-600",
-                  image: "https://via.placeholder.com/400x200?text=S.+M.+Maruf+Hasan+Nirob"
+                  image: "assets/nirob.jpeg"
                 },
                 {
                   name: "Aby Sayem",
@@ -1032,9 +1039,7 @@ const AboutPage = ({ onNavigate }) => {
             </div>
 
             <div className="bg-sky-light rounded-xl p-6 mb-6">
-              <p className="text-gray-700 text-lg leading-relaxed">
-                {selectedMember.description}
-              </p>
+              <p className="text-gray-700 text-lg leading-relaxed" dangerouslySetInnerHTML={{ __html: selectedMember.description }}></p>
             </div>
 
             <div className="flex gap-4 justify-end">
