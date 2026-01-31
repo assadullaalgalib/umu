@@ -3,8 +3,8 @@ import { useEffect, useRef, useState } from "react";
 const galleryData = [
   {
     "id": 1,
-    "title": "World peace March in chechenia-2014",
-    "image": "/assets/gallery-078.jpg",
+    "title": "",
+    "image": "assets/saidi saheb.jpeg",
     "thumbnail": "/assets/gallery-078-thumb.jpg",
     "description": "Highlights from our annual conference",
     "category": "events",
@@ -16,7 +16,7 @@ const galleryData = [
   },
   {
     "id": 2,
-    "title": "Umu Headquarters in Moscow",
+    "title": "",
     "image": "/assets/gallery-0142.jpg",
     "thumbnail": "/assets/gallery-0142-thumb.jpg",
     "description": "Our team engaging with the community",

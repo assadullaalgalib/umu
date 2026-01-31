@@ -558,6 +558,51 @@ const AboutPage = ({ onNavigate }) => {
         </div>
       </div>
 
+      {/* Advisor Board */}
+      <div className="py-20 bg-gray-50 border-b border-gray-200">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl md:text-4xl font-black text-center text-primary mb-16">
+            Advisor
+          </h2>
+
+          <div className="max-w-4xl mx-auto">
+            <p className="text-center text-gray-700 text-lg mb-12 leading-relaxed">
+              The Advisor Board provides strategic guidance and oversight to ensure the organization's long-term success and alignment with its mission.
+            </p>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                {
+                  name: "Mufti Shaykh Nafigulla Ashirov ",
+                  title: "Chairman(Russia)",
+              
+                  color: "from-blue-500 to-blue-600",
+                  image: "assets/Nafigulla.jpg"
+                },
+                {
+                  name: "Shaykh Sayed Kamaluddin Zafree",
+                  title: "Co-Chairman (Bangladesh)",
+                  color: "from-purple-500 to-purple-600",
+                  image: "/public/assets/ksmsl uddin.jpeg"
+                }
+              ].map((member, index) => (
+                <div
+                  key={index}
+                  onClick={() => setSelectedMember(member)}
+                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all min-h-96 flex flex-col cursor-pointer"
+                >
+                  <img src={member.image} alt={member.name} className="w-48 h-48 object-cover rounded-full mx-auto mt-6 mb-4 shadow-lg" />
+                  <div className="p-6 flex-1">
+                    <h3 className="text-2xl font-bold text-primary mb-1">{member.name}</h3>
+                    <p className="text-gold font-bold mb-3">{member.title}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Executive Board */}
       <div className="py-20 bg-sky-light border-b border-gray-200">
         <div className="container mx-auto px-4 max-w-6xl">
@@ -638,7 +683,7 @@ const AboutPage = ({ onNavigate }) => {
                   title: "Vice President United Muslim Ummah & Chairman, Education and Research,University of Dhaka",
                   description: "Leading education initiatives and research coordination",
                   color: "from-lime-500 to-lime-600",
-                  image: "/assets/kamrul hassan.jpg"
+                  image: "/assets/kamrul hassan.jpeg"
                 },
                 {
                   name: "Professor Dr. Ariful Islam",
@@ -720,7 +765,7 @@ const AboutPage = ({ onNavigate }) => {
               {
                 name: "Education and Research Committee",
                 president: "Professor Dr. Kamrul Hasan",
-                presidentImage: "/assets/kamrul hassan.jpg",
+                presidentImage: "/assets/kamrul hassan.jpeg",
                 vicePresident: "Vice Chairman",
                 vicePresidentImage: "assets/MEN in muslim.webp",
                 description: "Leading education initiatives and research coordination",
