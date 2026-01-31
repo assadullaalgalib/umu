@@ -374,10 +374,10 @@ const AboutPage = ({ onNavigate }) => {
 
       {/* Our Flag */}
       <div className="py-20 border-b border-gray-200">
-        <div className="container mx-auto px-4 max-w-6xl">
-          <h2 className="text-3xl md:text-4xl font-black text-center text-primary mb-16">
-            Flag of United Muslim Ummah
-          </h2>
+          * <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-black text-center text-primary mb-16">
+              Flag of United Muslim Ummah
+            </h2> 
 
           <div className="max-w-4xl mx-auto text-center">
             <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
@@ -496,7 +496,7 @@ const AboutPage = ({ onNavigate }) => {
                 icon: "🌍"
               },
               {
-                title: "Youth Network Programs",
+                title: "Young Network Programs",
                 items: ["Family libraries establishment", "College & university committees", "Monthly discussion forums", "Seminars & round-table conferences", "Publication & outreach", "Leadership development workshops"],
                 icon: "👥"
               },
@@ -506,7 +506,7 @@ const AboutPage = ({ onNavigate }) => {
                 icon: "👩‍🤝‍👩"
               },
               {
-                title: "Scholars Committee Programs",
+                title: "Scholars Programs",
                 items: ["Discussion forums & seminars", "District & sub-district missions", "Religious guidance & counsel", "Islamic knowledge dissemination", "Interfaith dialogue initiatives", "Educational material publication"],
                 icon: "📚"
               },
@@ -923,7 +923,7 @@ const AboutPage = ({ onNavigate }) => {
                 key={index}
                 className="bg-white rounded-xl shadow-lg p-4"
               >
-                <h3 className="text-lg font-bold text-primary mb-3 text-center">{committee.name}</h3>
+                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-3 text-center">{committee.name}</h3>
                 <div className={`grid ${committee.name === "Young Network Committee" ? "md:grid-cols-3 lg:grid-cols-5" : "md:grid-cols-2"} gap-4 mb-3`}>
                   <div className="text-center">
                     <img
@@ -932,8 +932,8 @@ const AboutPage = ({ onNavigate }) => {
                       className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                       onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                     />
-                    <h4 className="text-sm font-bold text-gold mb-1">{committee.presidentTitle || "President"}</h4>
-                    <p className="text-gray-700 font-semibold text-xs">{committee.president}</p>
+                    <h4 className="text-base font-bold text-gold mb-1">{committee.presidentTitle || "President"}</h4>
+                    <p className="text-gray-700 font-semibold text-sm">{committee.president}</p>
                   </div>
                   {committee.name === "Young Network Committee" && (
                     <>
@@ -944,8 +944,8 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                         />
-                        <h4 className="text-sm font-bold text-gold mb-1">{committee.secretaryGeneralTitle}</h4>
-                        <p className="text-gray-700 font-semibold text-xs">{committee.secretaryGeneral}</p>
+                        <h4 className="text-base font-bold text-gold mb-1">{committee.secretaryGeneralTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-sm">{committee.secretaryGeneral}</p>
                       </div>
                       <div className="text-center">
                         <img
@@ -954,8 +954,8 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                         />
-                        <h4 className="text-sm font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
-                        <p className="text-gray-700 font-semibold text-xs">{committee.vicePresident}</p>
+                        <h4 className="text-base font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
+                        <p className="text-gray-700 font-semibold text-sm">{committee.vicePresident}</p>
                       </div>
                       <div className="text-center">
                         <img
@@ -964,8 +964,8 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                         />
-                        <h4 className="text-sm font-bold text-gold mb-1">{committee.itHeadTitle}</h4>
-                        <p className="text-gray-700 font-semibold text-xs">{committee.itHead}</p>
+                        <h4 className="text-base font-bold text-gold mb-1">{committee.itHeadTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-sm">{committee.itHead}</p>
                       </div>
                       <div className="text-center">
                         <img
@@ -974,8 +974,8 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                         />
-                        <h4 className="text-sm font-bold text-gold mb-1">{committee.assistantHeadTitle}</h4>
-                        <p className="text-gray-700 font-semibold text-xs">{committee.assistantHead}</p>
+                        <h4 className="text-base font-bold text-gold mb-1">{committee.assistantHeadTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-sm">{committee.assistantHead}</p>
                       </div>
                     </>
                   )}
@@ -987,14 +987,14 @@ const AboutPage = ({ onNavigate }) => {
                         className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                         onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                       />
-                      <h4 className="text-sm font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
-                      <p className="text-gray-700 font-semibold text-xs">{committee.vicePresident}</p>
+                      <h4 className="text-base font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
+                      <p className="text-gray-700 font-semibold text-sm">{committee.vicePresident}</p>
                     </div>
                   )}
                 </div>
-                <p className="text-gray-600 leading-relaxed text-xs text-center">{committee.description}</p>
+                <p className="text-gray-600 leading-relaxed text-sm text-center">{committee.description}</p>
                 <div className="mt-6">
-                  <h4 className="text-md font-bold text-primary mb-4 text-center">Committee Members</h4>
+                  <h4 className="text-lg font-bold text-primary mb-4 text-center">Committee Members</h4>
                   <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {committee.members.map((member, idx) => (
                       <div key={idx} className="text-center">
@@ -1004,8 +1004,8 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-24 h-24 object-cover rounded-full mx-auto mb-2 shadow-md"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/96x96?text=Image+Not+Found'}
                         />
-                        <h5 className="text-xs font-bold text-gold mb-1">{member.title}</h5>
-                        <p className="text-gray-700 font-semibold text-xs">{member.name}</p>
+                        <h5 className="text-sm font-bold text-gold mb-1">{member.title}</h5>
+                        <p className="text-gray-700 font-semibold text-sm">{member.name}</p>
                       </div>
                     ))}
                   </div>
