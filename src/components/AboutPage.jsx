@@ -607,7 +607,7 @@ const AboutPage = ({ onNavigate }) => {
       <div className="py-20 bg-sky-light border-b border-gray-200">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-black text-center text-primary mb-16">
-            Executive Board
+            Executive Boby
           </h2>
 
           <div className="max-w-4xl mx-auto">
