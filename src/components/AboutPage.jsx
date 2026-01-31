@@ -622,7 +622,7 @@ const AboutPage = ({ onNavigate }) => {
                   title: "Founder President and Idea Maker of UMU",
                   description: `Ex-President, International Islamic Representative Organization (IIRO).
 
-                  Member, Interethnic and Interfaith Commission of Russia under the President of the Russian Federation.
+
 
                   Chief Advisor (1994–1999), Friendship Committee with India, Bangladesh, Nepal, Maldives, and Pakistan, Russian State Duma.
 
@@ -900,9 +900,9 @@ const AboutPage = ({ onNavigate }) => {
               {
                 name: "Women Network Committee",
                 president: "Khadijatul Kubra Tamima",
-                presidentImage: "assets/kadijatul.jpeg",
+                presidentImage: "assets/vc umu.jpeg ",
                 vicePresident: "Aminiah Asquarata",
-                vicePresidentImage: "assets/vc umu.jpeg",
+                vicePresidentImage: "assets/kadijatul.jpeg",
                 description: "Leading women's empowerment and network activities",
                 presidentTitle: "President",
                 vicePresidentTitle: "Vice President",
@@ -923,7 +923,7 @@ const AboutPage = ({ onNavigate }) => {
                 key={index}
                 className="bg-white rounded-xl shadow-lg p-4"
               >
-                <h3 className="text-2xl md:text-3xl font-bold text-primary mb-3 text-center">{committee.name}</h3>
+                <h3 className="text-lg font-bold text-primary mb-3 text-center">{committee.name}</h3>
                 <div className={`grid ${committee.name === "Young Network Committee" ? "md:grid-cols-3 lg:grid-cols-5" : "md:grid-cols-2"} gap-4 mb-3`}>
                   <div className="text-center">
                     <img
@@ -932,8 +932,8 @@ const AboutPage = ({ onNavigate }) => {
                       className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                       onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                     />
-                    <h4 className="text-base font-bold text-gold mb-1">{committee.presidentTitle || "President"}</h4>
-                    <p className="text-gray-700 font-semibold text-sm">{committee.president}</p>
+                    <h4 className="text-sm font-bold text-gold mb-1">{committee.presidentTitle || "President"}</h4>
+                    <p className="text-gray-700 font-semibold text-xs">{committee.president}</p>
                   </div>
                   {committee.name === "Young Network Committee" && (
                     <>
@@ -944,8 +944,8 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                         />
-                        <h4 className="text-base font-bold text-gold mb-1">{committee.secretaryGeneralTitle}</h4>
-                        <p className="text-gray-700 font-semibold text-sm">{committee.secretaryGeneral}</p>
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.secretaryGeneralTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.secretaryGeneral}</p>
                       </div>
                       <div className="text-center">
                         <img
@@ -954,8 +954,8 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                         />
-                        <h4 className="text-base font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
-                        <p className="text-gray-700 font-semibold text-sm">{committee.vicePresident}</p>
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.vicePresident}</p>
                       </div>
                       <div className="text-center">
                         <img
@@ -964,8 +964,8 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                         />
-                        <h4 className="text-base font-bold text-gold mb-1">{committee.itHeadTitle}</h4>
-                        <p className="text-gray-700 font-semibold text-sm">{committee.itHead}</p>
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.itHeadTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.itHead}</p>
                       </div>
                       <div className="text-center">
                         <img
@@ -974,8 +974,8 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                         />
-                        <h4 className="text-base font-bold text-gold mb-1">{committee.assistantHeadTitle}</h4>
-                        <p className="text-gray-700 font-semibold text-sm">{committee.assistantHead}</p>
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.assistantHeadTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.assistantHead}</p>
                       </div>
                     </>
                   )}
@@ -987,14 +987,14 @@ const AboutPage = ({ onNavigate }) => {
                         className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
                         onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                       />
-                      <h4 className="text-base font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
-                      <p className="text-gray-700 font-semibold text-sm">{committee.vicePresident}</p>
+                      <h4 className="text-sm font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
+                      <p className="text-gray-700 font-semibold text-xs">{committee.vicePresident}</p>
                     </div>
                   )}
                 </div>
-                <p className="text-gray-600 leading-relaxed text-sm text-center">{committee.description}</p>
+                <p className="text-gray-600 leading-relaxed text-xs text-center">{committee.description}</p>
                 <div className="mt-6">
-                  <h4 className="text-lg font-bold text-primary mb-4 text-center">Committee Members</h4>
+                  <h4 className="text-md font-bold text-primary mb-4 text-center">Committee Members</h4>
                   <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {committee.members.map((member, idx) => (
                       <div key={idx} className="text-center">
@@ -1004,8 +1004,8 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-24 h-24 object-cover rounded-full mx-auto mb-2 shadow-md"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/96x96?text=Image+Not+Found'}
                         />
-                        <h5 className="text-sm font-bold text-gold mb-1">{member.title}</h5>
-                        <p className="text-gray-700 font-semibold text-sm">{member.name}</p>
+                        <h5 className="text-xs font-bold text-gold mb-1">{member.title}</h5>
+                        <p className="text-gray-700 font-semibold text-xs">{member.name}</p>
                       </div>
                     ))}
                   </div>
