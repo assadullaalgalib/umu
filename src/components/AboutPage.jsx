@@ -583,7 +583,7 @@ const AboutPage = ({ onNavigate }) => {
                   name: "Shaykh Sayed Kamaluddin Zafree",
                   title: "Co-Chairman (Bangladesh)",
                   color: "from-purple-500 to-purple-600",
-                  image: "/public/assets/ksmsl uddin.jpeg"
+                  image: "assets/Shaykh Sayed Kamaluddin Zafree.jpeg"
                 }
               ].map((member, index) => (
                 <div
@@ -641,7 +641,7 @@ const AboutPage = ({ onNavigate }) => {
                   title: "Secretary General",
                   description: "Overseeing administrative operations and executive coordination",
                   color: "from-teal-500 to-teal-600",
-                  image: "/assets/Mufti osman goni.jpeg"
+                  image: "assets/Mufti osman goni.jpeg"
                 },
                 {
                   name: "Khan Tipu Sultan",
