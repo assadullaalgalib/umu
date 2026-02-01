@@ -104,7 +104,7 @@ const AboutPage = ({ onNavigate }) => {
             Who Can Be Member of UMU?
           </h2>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <p className="text-center text-gray-700 text-lg mb-12 leading-relaxed">
               Those people who believe in the one Allah & the Prophet Muhammad (PBUH) is the last Prophet of Allah and held with a view of establish the unity of Ummah 
             </p>
@@ -319,7 +319,7 @@ const AboutPage = ({ onNavigate }) => {
             Our Journey
           </h2>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             {[
               {
                 year: "1990",
@@ -375,24 +375,27 @@ const AboutPage = ({ onNavigate }) => {
       {/* Our Flag */}
       <div className="py-20 border-b border-gray-200">
           * <div className="container mx-auto px-4 max-w-6xl">
+            <h2 className="text-3xl md:text-4xl font-black text-center text-primary mb-16">
+              Flag of United Muslim Ummah
+            </h2> 
 
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-6xl mx-auto text-center">
             <div className="bg-white rounded-2xl shadow-lg p-8 mb-8">
               <div className="mb-8">
                 <img
                   src="/assets/umu-flag.png"
                   alt="United Muslim Ummah Flag"
-                  className="w-full max-w-sm mx-auto rounded-lg shadow-md"
+                  className="w-full max-w-md mx-auto rounded-lg shadow-md"
                   onError={(e) => e.target.src = '/assets/gallery-093.jpg'}
                 />
               </div>
 
               <div className="text-left max-w-2xl mx-auto">
                 <h3 className="text-2xl font-bold text-primary mb-6 text-center">
-                  United Muslim Ummah has its own Flag
+                  United Muslim Ummah has own Flag
                 </h3>
                 <p className="text-gray-700 text-lg leading-relaxed">
-                  The organization has its own flag on a white cloth. At the top center of the flag in Arabic "La-ilaha illallah Muhammadur rasulullah (PBUH)" and in the light of Sharia, the downward vertical light is illuminating the world. The flag is a symbol of world peace.
+                  The organization has a own flag on white cloth. At the top center of the flag in Arabic "La-ilaha illallah Muhammadur rasulullah (PBUH)" and in the light of Sharia, the downward vertical light is illuminating the world. The flag is a symbol of world peace.
                 </p>
               </div>
             </div>
@@ -562,7 +565,7 @@ const AboutPage = ({ onNavigate }) => {
             Advisor
           </h2>
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <p className="text-center text-gray-700 text-lg mb-12 leading-relaxed">
               The Advisor Board provides strategic guidance and oversight to ensure the organization's long-term success and alignment with its mission.
             </p>
@@ -604,7 +607,7 @@ const AboutPage = ({ onNavigate }) => {
       <div className="py-20 bg-sky-light border-b border-gray-200">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-black text-center text-primary mb-16">
-            Executive Body
+            Executive Board
           </h2>
 
           <div className="max-w-6xl mx-auto">
@@ -612,121 +615,131 @@ const AboutPage = ({ onNavigate }) => {
               The Executive Board comprises distinguished leaders and professionals committed to advancing the organization's mission across all domains.
             </p>
 
-            {/* President Section */}
-            <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <div className="text-center mb-8">
-                <img
-                  src="/assets/amin vai 2.jpeg"
-                  alt="Madzhumder Muhammad Amin"
-                  className="w-40 h-40 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
-                  onError={(e) => e.target.src = 'https://via.placeholder.com/160x160?text=Image+Not+Found'}
-                />
-                <h3 className="text-3xl font-bold text-primary mb-3">Madzhumder Muhammad Amin</h3>
-                <p className="text-gray-600 font-medium text-lg">Founder President and Idea Maker of UMU</p>
-              </div>
-            </div>
+            {/* Executive Board Structure */}
+            <div className="bg-white rounded-xl shadow-lg p-6 mb-8">
+              <h3 className="text-2xl md:text-3xl font-bold text-primary mb-6 text-center">Executive Board</h3>
+                  name: "Madzhumder Muhammad Amin",
+                  title: "Founder President and Idea Maker of UMU",
+                  description: `Ex-President, International Islamic Representative Organization (IIRO).
 
-            {/* Vice President Section */}
-            <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-6">
-                {[
-                  { name: "Khan Tipu Sultan", title: "Senior Vice-President of UMU", image: "assets/khan Tipu sultan.png" },
-                  { name: "Hafez Maulana Muhibullahil Baki Nodovi", title: "Senior Vice-President of UMU", additional: "Pesh Imam, Central Baitul Mokarram Mosque", image: "assets/MOHAMMAD-MUHIBULLAHIL-BAQEE.jpg" },
-                  { name: "Musa Al Hafiz", title: "Senior Vice-President of UMU", image: "assets/Musa al hafiz.jpg" },
-                  { name: "Mufti Kazi Ibrahim", title: "Vice-President of UMU", image: "assets/Mufti Kazi Ibrahim.jpeg" },
-                  { name: "Prof. Dr. Rakibul Haque", title: "Vice-President of UMU", additional: "Chairman, Department of MIS, University of Dhaka", image: "assets/Rakibul islam.jpeg" },
-                  { name: "Professor Dr. Kamrul Hasan", title: "Vice-President of UMU", additional: "Chairman, Education & Research, University of Dhaka", image: "assets/kamrul hassan.jpeg" },
-                  { name: "Professor Dr. Ariful Islam", title: "Vice-President of UMU",additional: "Assistant Professor, University of Dhaka", image: "assets/Arif .jpeg" },
-                  { name: "Additional Vice President", image: "assets/MEN in muslim.webp" }
-                ].map((member, idx) => (
-                  <div key={idx} className="text-center">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-md border-2 border-gray-200"
-                      onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
-                    />
-                    <h4 className="text-xl font-bold text-primary mb-2">{member.name}</h4>
-                    {member.title && <p className="text-green-600 font-semibold text-base mb-2">{member.title}</p>}
-                    {member.additional && <p className="text-gray-500 text-sm mb-2">{member.additional}</p>}
+
+
+                  Chief Advisor (1994–1999), Friendship Committee with India, Bangladesh, Nepal, Maldives, and Pakistan, Russian State Duma.
+
+                  Chief Editor, Journal “Migrants” (Russia), from 2007.
+
+                  Chief Editor, Journal “Children’s Hope” (Russia), from 2007.
+
+                  Chairman (2007–2014), International Festival for Migrants of Russia.
+                  Ex-President, Federation of Migrants of Russia.`,
+
+                  color: "from-blue-500 to-blue-600",
+                  image: "assets/amin vai 2.jpeg"
+                },
+                {
+                  name: "Mufti Mohammad Osman Goni",
+                  title: "Secretary General",
+                  description: "Overseeing administrative operations and executive coordination",
+                  color: "from-teal-500 to-teal-600",
+                  image: "assets/Mufti osman goni.jpeg"
+                },
+                {
+                  name: "Khan Tipu Sultan",
+                  title: "Senior Vice-President",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "assets/MEN in muslim.webp"
+                },
+                {
+                  name: "Hafez Maulana Muhibullahil Baki Nodovi",
+                  title: "Pesh Imam of the Central Baitul Mokarram Mosque and Senior Vice-President United Muslim Ummah",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "assets/MOHAMMAD-MUHIBULLAHIL-BAQEE.jpg"
+                },
+                {
+                  name: "Musa Al Hafiz",
+                  title: "Senior Vice-President United Muslim Ummah",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "/assets/Musa al hafiz.jpg"
+                },
+                {
+                  name: "Mufti Kazi Ibrahim",
+                  title: "Vice-President United Muslim Ummah",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "/assets/Mufti Kazi Ibrahim.jpeg"
+                },
+                {
+                  name: "Prof.Dr.Rakibul Haque",
+                  title: "Chairman Deptment of MIS,University of Dhaka and Vice-President United Muslim Ummah",
+                  description: "Deputy leadership and special initiatives coordination",
+                  color: "from-green-500 to-green-600",
+                  image: "/assets/Rakibul islam.jpeg"
+                },
+                {
+                  name: "Professor Dr. Kamrul Hasan",
+                  title: "Vice President United Muslim Ummah & Chairman, Education and Research,University of Dhaka",
+                  description: "Leading education initiatives and research coordination",
+                  color: "from-lime-500 to-lime-600",
+                  image: "/assets/kamrul hassan.jpeg"
+                },
+                {
+                  name: "Professor Dr. Ariful Islam",
+                  title: "Assistant Professor, University of Dhaka & Vice President, UMU",
+                  description: "Academic leadership and vice presidential duties",
+                  color: "from-yellow-500 to-yellow-600",
+                  image: "/assets/Arif .jpeg"
+                },
+                {
+                  name: "Shahadat Yousuf",
+                  title: "Assistant Secretary General",
+                  description: "Supporting administrative functions and executive assistance",
+                  color: "from-cyan-500 to-cyan-600",
+                  image: "/assets/shahadat Yousuf.jpg"
+                },
+                {
+                  name: "Arafat Hasnain",
+                  title: "Director of Finance",
+                  description: "Financial management and resource allocation",
+                  color: "from-red-500 to-red-600",
+                  image: "assets/MEN in muslim.webp"
+                },
+                {
+                  name: "Md. Abu Naser Khan",
+                  title: "Executive Member",
+                  description: "Additional executive support and coordination",
+                  color: "from-indigo-500 to-indigo-600",
+                  image: "assets/MEN in muslim.webp"
+                }
+              ].map((member, index) => (
+                <div
+                  key={index}
+                  onClick={() => setSelectedMember(member)}
+                  className="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-lg transition-all min-h-96 flex flex-col cursor-pointer"
+                >
+                  <img src={member.image} alt={member.name} className="w-48 h-48 object-cover rounded-full mx-auto mt-6 mb-4 shadow-lg" />
+                  <div className="p-6 flex-1">
+                    <h3 className="text-2xl font-bold text-primary mb-1">{member.name}</h3>
+                    <p className="text-gold font-bold mb-3">{member.title}</p>
+                    <p className="text-gray-600 text-sm leading-relaxed">{member.description}</p>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Secretary General Section */}
-            <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <div className="max-w-md mx-auto">
-                <div className="text-center">
-                  <img
-                    src="/assets/Mufti osman goni.jpeg"
-                    alt="Mufti Mohammad Osman Goni"
-                    className="w-40 h-40 object-cover rounded-full mx-auto mb-6 shadow-lg border-4 border-white"
-                    onError={(e) => e.target.src = 'https://via.placeholder.com/160x160?text=Image+Not+Found'}
-                  />
-                  <h4 className="text-2xl font-bold text-primary mb-3">Professor Mufti Mohammad Osman Goni</h4>
-                  <p className="text-green-600 font-semibold text-lg">Secretary General of UMU</p>
                 </div>
-              </div>
-            </div>
-
-            {/* Assistant Secretary General Section */}
-            <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {[
-                  { name: "Shahadat Yousuf", title: "Assistant Secretary General", image: "/assets/shahadat Yousuf.jpg" },
-                  { name: "Assistant Secretary 1", title: "Assistant Secretary General", image: "assets/MEN in muslim.webp" },
-                  { name: "Assistant Secretary 2", title: "Assistant Secretary General", image: "assets/MEN in muslim.webp" },
-                  { name: "Assistant Secretary 3", title: "Assistant Secretary General", image: "assets/MEN in muslim.webp" }
-                ].map((member, idx) => (
-                  <div key={idx} className="text-center">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-md border-2 border-gray-200"
-                      onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
-                    />
-                    <h4 className="text-xl font-bold text-primary">{member.name}</h4>
-                    {member.title && <p className="text-green-600 font-semibold text-base mb-2">{member.title}</p>}
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Members Section */}
-            <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-                {[
-                  { name: "Arafat Hasnain", title: "Director of Finance", image: "assets/MEN in muslim.webp" },
-                  { name: "Md. Abu Naser Khan", title: "Executive Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Executive Member 1", title: "Executive Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Executive Member 2", title: "Executive Member", image: "assets/MEN in muslim.webp" }
-                ].map((member, idx) => (
-                  <div key={idx} className="text-center">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-md border-2 border-gray-200"
-                      onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
-                    />
-                    <h4 className="text-xl font-bold text-primary">{member.name}</h4>
-                    {member.title && <p className="text-green-600 font-semibold text-base mb-2">{member.title}</p>}
-                  </div>
-                ))}
-              </div>
+              ))}
             </div>
           </div>
         </div>
       </div>
 
       {/* Sub-Committees */}
-      <div className="py-40 border-b border-gray-200">
+      <div className="py-20 border-b border-gray-200">
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl md:text-4xl font-black text-center text-primary mb-16">
             Sub-Committees
           </h2>
 
-          <div className="space-y-16">
+          <div className="space-y-12">
             {[
               {
                 name: "Ulama Committee",
@@ -745,7 +758,8 @@ const AboutPage = ({ onNavigate }) => {
                   { name: "Sheikh Khalid Al-Mansoori", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Mufti Tariq Al-Siddiqui", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Dr. Hassan Al-Qurtubi", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Imam Saad Al-Riyadh", title: "Member", image: "assets/MEN in muslim.webp" }
+                  { name: "Imam Saad Al-Riyadh", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Sheikh Fahad Al-Najdi", title: "Member", image: "assets/MEN in muslim.webp" }
                 ]
               },
               {
@@ -765,7 +779,8 @@ const AboutPage = ({ onNavigate }) => {
                   { name: "Professor Layla Al-Hussein", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Dr. Omar Al-Sabah", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Dr. Sara Al-Fayed", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Professor Khalid Al-Rashid", title: "Member", image: "assets/MEN in muslim.webp" }
+                  { name: "Professor Khalid Al-Rashid", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Nadia Al-Khalifa", title: "Member", image: "assets/MEN in muslim.webp" }
                 ]
               },
               {
@@ -785,7 +800,8 @@ const AboutPage = ({ onNavigate }) => {
                   { name: "Dr. Yasmin Al-Qatari", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Mr. Saad Al-Emirati", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Dr. Fatima Al-Bahraini", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Mr. Khalid Al-Omani", title: "Member", image: "assets/MEN in muslim.webp" }
+                  { name: "Mr. Khalid Al-Omani", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Nour Al-Jordanian", title: "Member", image: "assets/MEN in muslim.webp" }
                 ]
               },
               {
@@ -805,7 +821,8 @@ const AboutPage = ({ onNavigate }) => {
                   { name: "Dr. Layla Al-Afghani", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Mr. Jamal Al-Yemeni", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Dr. Amina Al-Somali", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Mr. Hassan Al-Sudanese", title: "Member", image: "assets/MEN in muslim.webp" }
+                  { name: "Mr. Hassan Al-Sudanese", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Nadia Al-Egyptian", title: "Member", image: "assets/MEN in muslim.webp" }
                 ]
               },
               {
@@ -825,7 +842,8 @@ const AboutPage = ({ onNavigate }) => {
                   { name: "Dr. Omar Al-Mauritanian", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Mr. Sara Al-Chadian", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Dr. Jamal Al-Nigerian", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Mr. Hana Al-Malian", title: "Member", image: "assets/MEN in muslim.webp" }
+                  { name: "Mr. Hana Al-Malian", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Khalid Al-Senegalese", title: "Member", image: "assets/MEN in muslim.webp" }
                 ]
               },
               {
@@ -845,14 +863,12 @@ const AboutPage = ({ onNavigate }) => {
                   { name: "Dr. Layla Al-Omani", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Mr. Jamal Al-Saudi", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Dr. Sara Al-Jordanian", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Mr. Khalid Al-Lebanese", title: "Member", image: "assets/MEN in muslim.webp" }
+                  { name: "Mr. Khalid Al-Lebanese", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Dr. Nadia Al-Iraqi", title: "Member", image: "assets/MEN in muslim.webp" }
                 ]
               },
               {
                 name: "Young Network Committee",
-                advisor: "Shahadat Yousuf",
-                advisorImage: "assets/shahadat Yousuf.jpg",
-                advisorTitle: "Advisor",
                 president: "S. M. Maruf Hasan Nirob",
                 presidentImage: "assets/nirob.jpeg",
                 presidentTitle: "President",
@@ -860,7 +876,7 @@ const AboutPage = ({ onNavigate }) => {
                 secretaryGeneralImage: "assets/shifat.jpeg",
                 secretaryGeneralTitle: "Secretary General",
                 vicePresident: "Saidul Hasan",
-                vicePresidentImage: "assets/saidul hasan.jpeg",
+                vicePresidentImage: "/public/assets/saidul hasan.jpeg",
                 vicePresidentTitle: "Vice President",
                 itHead: "Md Atiqur Rahman Rasel",
                 itHeadImage: "assets/Atiq.png",
@@ -877,145 +893,119 @@ const AboutPage = ({ onNavigate }) => {
                   { name: "Jamal Al-Dynamic", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Sara Al-Motivated", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Khalid Al-Progressive", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Hana Al-Engaged", title: "Member", image: "assets/MEN in muslim.webp" }
+                  { name: "Hana Al-Engaged", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Tariq Al-Visionary", title: "Member", image: "assets/MEN in muslim.webp" }
                 ]
               },
               {
                 name: "Women Network Committee",
                 president: "Khadijatul Kubra Tamima",
                 presidentImage: "assets/vc umu.jpeg ",
-                presidentPosition: "Lecturer Arabic, Borhan Uddin Kamil Madrasa, Borhan Uddin, Bhola.",
                 vicePresident: "Aminiah Asquarata",
                 vicePresidentImage: "assets/kadijatul.jpeg",
                 description: "Leading women's empowerment and network activities",
                 presidentTitle: "President",
                 vicePresidentTitle: "Vice President",
                 members: [
-                  { name: "Aisha Poli", title: "Member", image: "assets/gallery-0272.jpg" },
-                  { name: "Fatema Malik", title: "Member", image: "assets/gallery-0273.jpg" },
-                  { name: "Nargish Akter", title: "Member", image: "assets/gallery-0274.jpg" },
-                  { name: "Afroz Sultan", title: "Member", image: "assets/gallery-0275.jpg" },
-                  { name: "Hana Al-Advocate", title: "Member", image: "assets/gallery-0276.jpg" },
-                  { name: "Nadia Al-Pioneer", title: "Member", image: "assets/gallery-0277.jpg" },
-                  { name: "Amira Al-Visionary", title: "Member", image: "assets/gallery-0278.jpg" },
-                  { name: "Leila Al-Champion", title: "Member", image: "assets/gallery-0279.jpg" },
-                  { name: "Yasmin Al-Innovator", title: "Member", image: "assets/gallery-0280.jpg" },
-                  { name: "Zara Al-Empower", title: "Member", image: "assets/gallery-0281.jpg" },
-                  { name: "Maya Al-Leader", title: "Member", image: "assets/gallery-0282.jpg" },
-                  { name: "Sofia Al-Inspire", title: "Member", image: "assets/gallery-0283.jpg" },
-                  { name: "Rima Al-Strength", title: "Member", image: "assets/gallery-0284.jpg" },
-                  { name: "Samira Al-Hope", title: "Member", image: "assets/gallery-0285.jpg" },
-                  { name: "Tahmina Al-Grace", title: "Member", image: "assets/gallery-0286.jpg" },
-                  { name: "Lubna Al-Courage", title: "Member", image: "assets/gallery-0287.jpg" },
-                  { name: "Farzana Al-Unity", title: "Member", image: "assets/gallery-0288.jpg" },
-                  { name: "Nusrat Al-Wisdom", title: "Member", image: "assets/gallery-0289.jpg" },
-                  { name: "Sharmin Al-Light", title: "Member", image: "assets/gallery-0290.jpg" },
-                  { name: "Maliha Al-Peace", title: "Member", image: "assets/gallery-0291.jpg" },
-                  { name: "Israt Al-Dignity", title: "Member", image: "assets/gallery-0292.jpg" },
-                  { name: "Sadia Al-Progress", title: "Member", image: "assets/gallery-0293.jpg" },
-                  { name: "Anika Al-Trust", title: "Member", image: "assets/gallery-0294.jpg" },
-                  { name: "Fariha Al-Future", title: "Member", image: "assets/gallery-0295.jpg" }
+                  { name: "Aisha Poli", title: "Member", image: "assets/women.jpg" },
+                  { name: "Fatema Malik", title: "Member", image: "assets/women.jpg" },
+                  { name: "Nargish Akter", title: "Member", image: "assets/women.jpg" },
+                  { name: "Afroz Sultan", title: "Member", image: "assets/women.jpg" },
+                  { name: "Hana Al-Advocate", title: "Member", image: "assets/women.jpg" },
+                  { name: "Nadia Al-Pioneer", title: "Member", image: "assets/women.jpg" },
+                  { name: "Amira Al-Visionary", title: "Member", image: "assets/women.jpg" },
+                  { name: "Leila Al-Champion", title: "Member", image: "assets/women.jpg" },
+                  { name: "Yasmin Al-Innovator", title: "Member", image: "assets/women.jpg" }
                 ]
               }
             ].map((committee, index) => (
               <div
                 key={index}
-                className="bg-white rounded-2xl shadow-xl p-12 hover:shadow-2xl transition-all duration-300 border-t-4 border-gold"
+                className="bg-white rounded-xl shadow-lg p-4"
               >
-                <h3 className="text-3xl font-black text-primary mb-3 text-center">{committee.name}</h3>
-                <div className={`grid ${committee.name === "Young Network Committee" ? "grid-cols-1 md:grid-cols-3 lg:grid-cols-5" : "md:grid-cols-2"} gap-6 mb-6`}>
-                  {committee.name === "Young Network Committee" && (
-                    <>
-                      {/* Advisor Card - Centered at top */}
-                      <div className="md:col-span-3 lg:col-span-5 text-center mb-8">
-                        <div className="bg-gradient-to-br from-gold/20 to-primary/20 rounded-2xl p-8 shadow-xl border-2 border-gold/30 max-w-md mx-auto">
-                          <img
-                            src={committee.advisorImage}
-                            alt={committee.advisor}
-                            className="w-40 h-40 object-cover rounded-full mx-auto mb-6 shadow-2xl border-6 border-white"
-                            onError={(e) => e.target.src = 'https://via.placeholder.com/160x160?text=Image+Not+Found'}
-                          />
-                          <h4 className="text-2xl font-black text-gold mb-3">{committee.advisorTitle}</h4>
-                          <p className="text-gray-800 font-black text-xl">{committee.advisor}</p>
-                        </div>
-                      </div>
-                    </>
-                  )}
-                  {/* President/Chairman - shown for all committees */}
+                <h3 className="text-lg font-bold text-primary mb-3 text-center">{committee.name}</h3>
+                <div className={`grid ${committee.name === "Young Network Committee" ? "md:grid-cols-3 lg:grid-cols-5" : "md:grid-cols-2"} gap-4 mb-3`}>
                   <div className="text-center">
                     <img
                       src={committee.presidentImage}
                       alt={committee.president}
-                      className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
-                      onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                      className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                      onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                     />
-                    <h4 className="text-lg font-bold text-gold mb-2">{committee.presidentTitle || "President"}</h4>
-                    <p className="text-gray-800 font-bold text-sm">{committee.president}</p>
-                    {committee.presidentPosition && <p className="text-gray-600 text-xs">{committee.presidentPosition}</p>}
-                  </div>
-                  {/* Vice President - shown for all committees */}
-                  <div className="text-center">
-                    <img
-                      src={committee.vicePresidentImage}
-                      alt={committee.vicePresident}
-                      className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
-                      onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
-                    />
-                    <h4 className="text-lg font-bold text-gold mb-2">{committee.vicePresidentTitle || "Vice President"}</h4>
-                    <p className="text-gray-800 font-bold text-sm">{committee.vicePresident}</p>
+                    <h4 className="text-sm font-bold text-gold mb-1">{committee.presidentTitle || "President"}</h4>
+                    <p className="text-gray-700 font-semibold text-xs">{committee.president}</p>
                   </div>
                   {committee.name === "Young Network Committee" && (
                     <>
-                      {/* Additional Young Network Leaders */}
                       <div className="text-center">
                         <img
                           src={committee.secretaryGeneralImage}
                           alt={committee.secretaryGeneral}
-                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
-                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                          className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                         />
-                        <h4 className="text-lg font-bold text-gold mb-2">{committee.secretaryGeneralTitle}</h4>
-                        <p className="text-gray-800 font-bold text-sm">{committee.secretaryGeneral}</p>
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.secretaryGeneralTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.secretaryGeneral}</p>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={committee.vicePresidentImage}
+                          alt={committee.vicePresident}
+                          className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.vicePresident}</p>
                       </div>
                       <div className="text-center">
                         <img
                           src={committee.itHeadImage}
                           alt={committee.itHead}
-                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
-                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                          className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                         />
-                        <h4 className="text-lg font-bold text-gold mb-2">{committee.itHeadTitle}</h4>
-                        <p className="text-gray-800 font-bold text-sm">{committee.itHead}</p>
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.itHeadTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.itHead}</p>
                       </div>
                       <div className="text-center">
                         <img
                           src={committee.assistantHeadImage}
                           alt={committee.assistantHead}
-                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
-                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                          className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
                         />
-                        <h4 className="text-lg font-bold text-gold mb-2">{committee.assistantHeadTitle}</h4>
-                        <p className="text-gray-800 font-bold text-sm">{committee.assistantHead}</p>
+                        <h4 className="text-sm font-bold text-gold mb-1">{committee.assistantHeadTitle}</h4>
+                        <p className="text-gray-700 font-semibold text-xs">{committee.assistantHead}</p>
                       </div>
                     </>
                   )}
+                  {committee.name !== "Young Network Committee" && (
+                    <div className="text-center">
+                      <img
+                        src={committee.vicePresidentImage}
+                        alt={committee.vicePresident}
+                        className="w-64 h-64 object-cover rounded-full mx-auto mb-2 shadow-md"
+                        onError={(e) => e.target.src = 'https://via.placeholder.com/256x256?text=Image+Not+Found'}
+                      />
+                      <h4 className="text-sm font-bold text-gold mb-1">{committee.vicePresidentTitle || "Vice President"}</h4>
+                      <p className="text-gray-700 font-semibold text-xs">{committee.vicePresident}</p>
+                    </div>
+                  )}
                 </div>
-                <div className="text-center mb-12 bg-gradient-to-r from-primary/5 to-gold/5 rounded-xl p-8">
-                  <p className="text-gray-700 leading-relaxed text-xl font-medium">{committee.description}</p>
-                </div>
-                <div className="border-t border-gray-200 pt-12">
-                  <h4 className="text-2xl font-bold text-primary mb-8 text-center">Committee Members</h4>
-                  <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <p className="text-gray-600 leading-relaxed text-xs text-center">{committee.description}</p>
+                <div className="mt-6">
+                  <h4 className="text-md font-bold text-primary mb-4 text-center">Committee Members</h4>
+                  <div className="grid md:grid-cols-3 lg:grid-cols-4 gap-4">
                     {committee.members.map((member, idx) => (
-                      <div key={idx} className="text-center bg-gray-50 rounded-lg p-6 hover:bg-primary/5 transition-all">
+                      <div key={idx} className="text-center">
                         <img
                           src={member.image}
                           alt={member.name}
-                          className="w-24 h-24 object-cover rounded-full mx-auto mb-4 shadow-md border-2 border-white"
+                          className="w-24 h-24 object-cover rounded-full mx-auto mb-2 shadow-md"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/96x96?text=Image+Not+Found'}
                         />
-                        <h5 className="text-sm font-bold text-gold mb-1">{member.title}</h5>
-                        <p className="text-gray-800 font-semibold text-sm">{member.name}</p>
+                        <h5 className="text-xs font-bold text-gold mb-1">{member.title}</h5>
+                        <p className="text-gray-700 font-semibold text-xs">{member.name}</p>
                       </div>
                     ))}
                   </div>
