@@ -616,13 +616,24 @@ const AboutPage = ({ onNavigate }) => {
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
               <div className="text-center mb-8">
                 <img
-                  src="/assets/amin vai 2.jpeg"
+                  src="assets/amin.jpg"
                   alt="Madzhumder Muhammad Amin"
                   className="w-40 h-40 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
                   onError={(e) => e.target.src = 'https://via.placeholder.com/160x160?text=Image+Not+Found'}
                 />
                 <h3 className="text-3xl font-bold text-primary mb-3">Madzhumder Muhammad Amin</h3>
                 <p className="text-gray-600 font-medium text-lg">Founder President and Idea Maker of UMU</p>
+                <div className="text-gray-600 text-sm">
+                  <p>Honorable Member: World Council of Religious Leaders.</p>
+                  <p>Chairman: World Peace Mission (2015–2020).</p>
+                  <p>President: Federation of Migrants of Russia 2006-2016.</p>
+                  <p>Chief Editor, Journal Migrants (Russia) from 2007.</p>
+                  <p>Chief Editor, Journal Children Hope (Russia) from 2007.</p>
+                  <p>Chairman (2007–2014), International Festival for Migrants of Russia.</p>
+                  <p>Ex-President, International Islamic Representative Organization (IIRO) (1994-2006).</p>
+                  <p>Member, Interethnic and Interfaith Commission of Russia under the President of Russia (2000-2011).</p>
+                  <p>Chief Advisor (1994–1999), Friendship Committee with India, Bangladesh, Nepal, Maldives,Pakistan, Russian State Duma.</p>
+                </div>
               </div>
             </div>
 
@@ -632,12 +643,16 @@ const AboutPage = ({ onNavigate }) => {
                 {[
                   { name: "Khan Tipu Sultan", title: "Senior Vice-President of UMU", image: "assets/khan Tipu sultan.png" },
                   { name: "Hafez Maulana Muhibullahil Baki Nodovi", title: "Senior Vice-President of UMU", additional: "Pesh Imam, Central Baitul Mokarram Mosque", image: "assets/MOHAMMAD-MUHIBULLAHIL-BAQEE.jpg" },
-                  { name: "Musa Al Hafiz", title: "Senior Vice-President of UMU", image: "assets/Musa al hafiz.jpg" },
-                  { name: "Mufti Kazi Ibrahim", title: "Vice-President of UMU", image: "assets/Mufti Kazi Ibrahim.jpeg" },
+                  { name: "Musa Al Hafiz", title: "Senior Vice-President of UMU",additional: "Islamic Scholar, Researcher & Public Speaker", image: "assets/Musa al hafiz.jpg" },
+                  { name: "Mufti Kazi Ibrahim", title: "Vice-President of UMU", additional: "Islamic Scholar, Researcher & Public Speaker",image: "assets/Mufti Kazi Ibrahim.jpeg" },
                   { name: "Prof. Dr. Rakibul Haque", title: "Vice-President of UMU", additional: "Chairman, Department of MIS, University of Dhaka", image: "assets/Rakibul islam.jpeg" },
-                  { name: "Professor Dr. Kamrul Hasan", title: "Vice-President of UMU", additional: "Chairman, Education & Research, University of Dhaka", image: "assets/kamrul hassan.jpeg" },
-                  { name: "Professor Dr. Ariful Islam", title: "Vice-President of UMU",additional: "Assistant Professor, University of Dhaka", image: "assets/Arif .jpeg" },
-                  { name: "Additional Vice President", image: "assets/MEN in muslim.webp" }
+                  { name: "Professor Dr. Kamrul Hasan", title: "Vice-President of UMU", additional: "Department of Tourism and Hospitality Management, University of Dhaka", image: "assets/kamrul hassan.jpeg" },
+                  { name: "Professor Dr. Ariful Islam", title: "Vice-President of UMU",additional: "Assistant Professor,Department of MIS, University of Dhaka", image: "assets/Arif .jpeg" },
+                  { name: "Dr.Muhammad Nurul Huda",title: "Vice-President of UMU",additional: "(Senior Scientist)Centre for Advanced Research in Sciences (CARS)", image: "assets/Dr.Muhammad Nurul Huda.jpg" },
+                   { name: "Dr. Md. Mizanur Rahman",title: "Vice-President of UMU",additional: "Executive Director,Centre for strategic and peace studies (csps)", image: "assets/Dr. Md. Mizanur Rahman.png" },
+                  { name: "Addtional Vice-President 1", title: "Vice-President of UMU", image: "assets/MEN in muslim.webp" },
+                  { name: "Addtional Vice-President 2", title: "Vice-President of UMU", image: "assets/MEN in muslim.webp" },
+                  { name: "Addtional Vice-President 3", title: "Vice-President of UMU", image: "assets/MEN in muslim.webp" }
                 ].map((member, idx) => (
                   <div key={idx} className="text-center">
                     <img
@@ -664,8 +679,31 @@ const AboutPage = ({ onNavigate }) => {
                     className="w-40 h-40 object-cover rounded-full mx-auto mb-6 shadow-lg border-4 border-white"
                     onError={(e) => e.target.src = 'https://via.placeholder.com/160x160?text=Image+Not+Found'}
                   />
-                  <h4 className="text-2xl font-bold text-primary mb-3">Professor Mufti Mohammad Osman Goni</h4>
-                  <p className="text-green-600 font-semibold text-lg">Secretary General of UMU</p>
+                  <h4 className="text-2xl font-bold text-primary mb-3">Mufti Shaikh Muhammad Usman Gonee</h4>
+                  <p className="text-green-600 font-semibold text-lg">Secretary General of United Muslim Ummah</p>
+                  <div className="text-gray-600 text-sm">
+                  <p>Founder-President: Shaikh Sadi (Rh.) Foundation Bangladesh</p>
+                  <p>Chairman: Islamic Scholars Forum Bangladesh</p>
+                  <p>Chairman: Qasemul Ulum & Faizul Ulum Girls Madrasah & Orphans Home, Dhaka</p>
+                  <p>Chairman: Nasirul Ulum Boys Madrasah & Orphans Home, Dhaka</p>
+                  <p>President: National Mufti Society Bangladesh</p>
+                  <p>Vice-President: National Writers Society (Jatiyo Lekhok Porishod)</p>
+                  <p>Vice-President: Bangladesh Islamic Intellectual Movement</p>
+                  <p>Vice-Chairman: Bangladesh Islamic Journalist Association</p>
+                  <p>Director: Ahsania Hajj & Umrah Training Institute</p>
+                  <p>Religious Facilitator: World Vision Bangladesh</p>
+                  <p>Life Member & Executive Committee Member: Hatia Dip Somiti, Dhaka</p>
+                  <p>Senior Joint-Secretary: Bangladesh National Imam Association</p>
+                  <p>Joint-Secretary: National Tafsir Foundation Bangladesh</p>
+                  <p>Head Trainer: Nurani Muallim Training, Jamia Islamia, Dhaka</p>
+                  <p>Instructor: Arabic Language Club, Sheikh Rasel Cantonment Public School & College</p>
+                  <p>Expert Member: Ushar Management Committee, Islamic Foundation</p>
+                  <p>Member: Islamic Economy & Banking Research, Islamic Foundation</p>
+                  <p>Member: Book Review Committee, Islamic Foundation Bangladesh</p>
+                  <p>Advisor: Muslim Unity Society Bangladesh</p>
+                  <p>Advisor: Career Bangladesh</p>
+                  <p>Speaker & Presenter: BTV, BTV World, Radio Bangladesh & Satellite TV Channels</p>
+                </div>
                 </div>
               </div>
             </div>
@@ -674,9 +712,9 @@ const AboutPage = ({ onNavigate }) => {
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { name: "Shahadat Yousuf", title: "Assistant Secretary General", image: "/assets/shahadat Yousuf.jpg" },
-                  { name: "Assistant Secretary 1", title: "Assistant Secretary General", image: "assets/MEN in muslim.webp" },
-                  { name: "Assistant Secretary 2", title: "Assistant Secretary General", image: "assets/MEN in muslim.webp" },
+                  { name: "Shahadat Yousuf", title: "Assistant Secretary General",additional: "Chairman, Al Hikma Academic and Somikoron Hosel",  image: "/assets/shahadat Yousuf.jpg" },
+                  { name: "Atiq Muzahid ", title: "Assistant Secretary General", additional: "Chairman, Al Hikma Academic and Somikoron Hosel", image: "assets/gallery-0304.jpg"},
+                  { name: "Mostofa Mohiuddin", title: "Assistant Secretary General", image: "assets/gallery-0301.jpg" },
                   { name: "Assistant Secretary 3", title: "Assistant Secretary General", image: "assets/MEN in muslim.webp" }
                 ].map((member, idx) => (
                   <div key={idx} className="text-center">
@@ -697,8 +735,8 @@ const AboutPage = ({ onNavigate }) => {
             <div className="bg-white rounded-xl shadow-lg p-8 mb-8">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
                 {[
-                  { name: "Arafat Hasnain", title: "Director of Finance", image: "assets/MEN in muslim.webp" },
-                  { name: "Md. Abu Naser Khan", title: "Executive Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Arafat Hasnain", title: "Director of Finance", image: "assets/Arafat Hasnin.jpeg" },
+                  { name: "Md Shoriful Islam", title: "Executive Member", image: "assets/gallery-0270.jpg" },
                   { name: "Executive Member 1", title: "Executive Member", image: "assets/MEN in muslim.webp" },
                   { name: "Executive Member 2", title: "Executive Member", image: "assets/MEN in muslim.webp" }
                 ].map((member, idx) => (
@@ -771,7 +809,7 @@ const AboutPage = ({ onNavigate }) => {
               {
                 name: "Human Rights Committee",
                 president: "Shoid Ahmed Kayes",
-                presidentImage: "assets/MEN in muslim.webp",
+                presidentImage: "assets/shoid ahamed.jpeg",
                 vicePresident: "Deputy Chairman",
                 vicePresidentImage: "assets/MEN in muslim.webp",
                 description: "Advocating for human rights and committee leadership",
@@ -790,8 +828,8 @@ const AboutPage = ({ onNavigate }) => {
               },
               {
                 name: "Relief and Rehabilitation Committee",
-                president: "Shofikur Rahman",
-                presidentImage: "assets/MEN in muslim.webp",
+                president: "Jahim Uddin Badol",
+                presidentImage: "assets/Johim Uddin badol.jpeg",
                 vicePresident: "Deputy Chairman",
                 vicePresidentImage: "assets/MEN in muslim.webp",
                 description: "Coordinating relief efforts and rehabilitation programs",
@@ -811,7 +849,7 @@ const AboutPage = ({ onNavigate }) => {
               {
                 name: "International Committee",
                 president: "Aby Sayem",
-                presidentImage: "assets/MEN in muslim.webp",
+                presidentImage: "assets/Abu Sayem.png",
                 vicePresident: "Deputy Chairman",
                 vicePresidentImage: "assets/MEN in muslim.webp",
                 description: "Overseeing international relations and committee affairs",
@@ -849,10 +887,90 @@ const AboutPage = ({ onNavigate }) => {
                 ]
               },
               {
+                name: "Law and Sharia Committee",
+                president: "Md.Abu Sufian (Shohagh)",
+                presidentImage: "assets/Md.-Abu-Sufian.webp",
+                presidentPosition: "Mufti and Legal Advisor",
+                vicePresident: "Vice Chairman",
+                vicePresidentImage: "assets/MEN in muslim.webp",
+                description: "Managing legal and sharia affairs",
+                presidentTitle: "Chairman",
+                vicePresidentTitle: "Vice Chairman",
+                members: [
+                  { name: "Imam Hasan", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mufti Omar", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Sheikh Ali", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Qadi Fatima", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mufti Zain", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Sheikh Yusuf", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Imam Khalid", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Qadi Aisha", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Mufti Ibrahim", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Sheikh Omar", title: "Member", image: "assets/MEN in muslim.webp" }
+                ]
+              },
+              {
+                name: "Press and Publication Committee",
+                president: "Ahmed Moustafa ",
+                presidentImage: "assets/Ahamed Mustofa.jpeg",
+                presidentPosition: "Chief Editor, UMU Newsletter",
+                viceChairmen: [
+                  { name: "Md. Nizamuddin", image: "assets/mdnizamuddin.jpeg", title: "Vice Chairman" },
+                  { name: "Nachir Mahamud", image: "assets/nichir mahamud.png", title: "Vice Chairman" },
+                  { name: "Vice Chairman 3", image: "assets/MEN in muslim.webp", title: "Vice Chairman" },
+                  { name: "Vice Chairman 4", image: "assets/MEN in muslim.webp", title: "Vice Chairman" },
+                  { name: "Vice Chairman 5", image: "assets/MEN in muslim.webp", title: "Vice Chairman" }
+                ],
+                description: "Managing press and publication activities",
+                presidentTitle: "Chairman",
+                members: [
+                  { name: "Journalist Ali", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Editor Omar", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Reporter Fatima", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Publisher Zain", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Media Yusuf", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Press Khalid", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Publication Aisha", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "News Ibrahim", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Broadcast Omar", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Content Hasan", title: "Member", image: "assets/MEN in muslim.webp" }
+                ]
+              },
+              {
+                name: "IT Committee",
+                president: "Miraz",
+                presidentImage: "assets/MEN in muslim.webp",
+                presidentPosition: "Chief Technology Officer",
+                viceChairmen: [
+                  { name: "Atiqur Rahman Rasel", image: "assets/Atiq.png", title: "Vice Chairman" },
+                  { name: "Md Assadulla Al Galib", image: "assets/Galib.png", title: "Vice Chairman" },
+                  { name: "Md Asif Chowdhury", image: "assets/ASIF.jpg", title: "Vice Chairman" },
+                  { name: "Asiqur Rahaman", image: "assets/Asiqur rahaman.png", title: "Vice Chairman" },
+                  { name: "Vice Chairman 5", image: "assets/MEN in muslim.webp", title: "Vice Chairman" }
+                ],
+                description: "Managing IT and technology affairs",
+                presidentTitle: "Chairman",
+                members: [
+                  { name: "Developer Ali", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Programmer Omar", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Tech Support Fatima", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "System Admin Zain", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Network Yusuf", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Security Khalid", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Data Aisha", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Cloud Ibrahim", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "AI Omar", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Software Hasan", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Asik", title: "Member", image: "assets/MEN in muslim.webp" }
+                ]
+              },
+              {
                 name: "Young Network Committee",
-                advisor: "Shahadat Yousuf",
-                advisorImage: "assets/shahadat Yousuf.jpg",
-                advisorTitle: "Advisor",
+                advisors: [
+                  { name: "Professor Dr. Kamrul Hasan", image: "assets/kamrul hassan.jpeg", title: "Advisor" },
+                  { name: "Professor Dr. Ariful Islam", image: "assets/Arif .jpeg", title: "" },
+                  { name: "Shahadat Yousuf", image: "assets/shahadat Yousuf.jpg", title: "" }
+                ],
                 president: "S. M. Maruf Hasan Nirob",
                 presidentImage: "assets/nirob.jpeg",
                 presidentTitle: "President",
@@ -862,12 +980,21 @@ const AboutPage = ({ onNavigate }) => {
                 vicePresident: "Saidul Hasan",
                 vicePresidentImage: "assets/saidul hasan.jpeg",
                 vicePresidentTitle: "Vice President",
-                itHead: "Md Atiqur Rahman Rasel",
-                itHeadImage: "assets/Atiq.png",
-                itHeadTitle: "IT Head",
-                assistantHead: "MD ASSADULLA AL GALIB",
-                assistantHeadImage: "assets/Galib.png",
-                assistantHeadTitle: "Assistant IT Head",
+                secondVicePresident: "Asiqur Rahaman",
+                secondVicePresidentImage: "assets/Asiqur rahaman.png",
+                secondVicePresidentTitle: "Vice President",
+                thirdVicePresident: "Hamidur Raham",
+                thirdVicePresidentImage: "assets/gallery-0307.jpg",
+                thirdVicePresidentTitle: "Vice President",
+                fourthVicePresident: "Ismail Hossain",
+                fourthVicePresidentImage: "assets/gallery-0309.jpg",
+                fourthVicePresidentTitle: "Vice President",
+                itHead: "Md AbduLlah",
+                itHeadImage: "assets/abdullah.png",
+                itHeadTitle: "Vice-president",
+                assistantHead: "Jamal Uddin",
+                assistantHeadImage: "assets/gallery-0303.jpg",
+                assistantHeadTitle: "Vice-president",
                 description: "Managing youth programs and network development",
                 members: [
                   { name: "Ahmed Al-Young", title: "Member", image: "assets/MEN in muslim.webp" },
@@ -877,7 +1004,8 @@ const AboutPage = ({ onNavigate }) => {
                   { name: "Jamal Al-Dynamic", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Sara Al-Motivated", title: "Member", image: "assets/MEN in muslim.webp" },
                   { name: "Khalid Al-Progressive", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Hana Al-Engaged", title: "Member", image: "assets/MEN in muslim.webp" }
+                  { name: "Hana Al-Engaged", title: "Member", image: "assets/MEN in muslim.webp" },
+                  { name: "Ibrahim", title: "Member", image: "assets/gallery-0306.jpg" }
                 ]
               },
               {
@@ -890,8 +1018,12 @@ const AboutPage = ({ onNavigate }) => {
                 description: "Leading women's empowerment and network activities",
                 presidentTitle: "President",
                 vicePresidentTitle: "Vice President",
+                secretary: "Alhaz umme habiba",
+                secretaryImage: "assets/umme habiba.jpeg",
+                secretaryPosition: "Founder, Nure Madina Model Madrasa, Manda, Dhaka.",
+                secretaryTitle: "Secretary",
                 members: [
-                  { name: "Aisha Poli", title: "Member", image: "assets/gallery-0272.jpg" },
+                  { name: "Aisha Poli", title: "Member", image: "assets/gallery-0314.jpg" },
                   { name: "Fatema Malik", title: "Member", image: "assets/gallery-0273.jpg" },
                   { name: "Nargish Akter", title: "Member", image: "assets/gallery-0274.jpg" },
                   { name: "Afroz Sultan", title: "Member", image: "assets/gallery-0275.jpg" },
@@ -914,7 +1046,41 @@ const AboutPage = ({ onNavigate }) => {
                   { name: "Israt Al-Dignity", title: "Member", image: "assets/gallery-0292.jpg" },
                   { name: "Sadia Al-Progress", title: "Member", image: "assets/gallery-0293.jpg" },
                   { name: "Anika Al-Trust", title: "Member", image: "assets/gallery-0294.jpg" },
-                  { name: "Fariha Al-Future", title: "Member", image: "assets/gallery-0295.jpg" }
+                  { name: "Fariha Al-Future", title: "Member", image: "assets/gallery-0295.jpg" },
+                  { name: "New Member 1", title: "Member", image: "assets/gallery-0312.jpg" },
+                  { name: "New Member 2", title: "Member", image: "assets/gallery-0313.jpg" },
+                  { name: "New Member 3", title: "Member", image: "assets/gallery-0314.jpg" },
+                  { name: "New Member 4", title: "Member", image: "assets/gallery-0315.jpg" },
+                  { name: "New Member 5", title: "Member", image: "assets/gallery-0316.jpg" },
+                  { name: "New Member 6", title: "Member", image: "assets/gallery-0317.jpg" },
+                  { name: "New Member 7", title: "Member", image: "assets/gallery-0318.jpg" },
+                  { name: "New Member 8", title: "Member", image: "assets/gallery-0319.jpg" },
+                  { name: "New Member 9", title: "Member", image: "assets/gallery-0320.jpg" },
+                  { name: "New Member 10", title: "Member", image: "assets/gallery-0321.jpg" },
+                  { name: "New Member 11", title: "Member", image: "assets/gallery-0322.jpg" },
+                  { name: "New Member 12", title: "Member", image: "assets/gallery-0323.jpg" },
+                  { name: "New Member 13", title: "Member", image: "assets/gallery-0324.jpg" },
+                  { name: "New Member 14", title: "Member", image: "assets/gallery-0325.jpg" },
+                  { name: "New Member 15", title: "Member", image: "assets/gallery-0326.jpg" },
+                  { name: "New Member 16", title: "Member", image: "assets/gallery-0327.jpg" },
+                  { name: "New Member 17", title: "Member", image: "assets/gallery-0328.jpg" },
+                  { name: "New Member 18", title: "Member", image: "assets/gallery-0329.jpg" },
+                  { name: "New Member 19", title: "Member", image: "assets/gallery-0330.jpg" },
+                  { name: "New Member 20", title: "Member", image: "assets/gallery-0331.jpg" },
+                  { name: "New Member 21", title: "Member", image: "assets/gallery-0332.jpg" },
+                  { name: "New Member 22", title: "Member", image: "assets/gallery-0333.jpg" },
+                  { name: "New Member 23", title: "Member", image: "assets/gallery-0334.jpg" },
+                  { name: "New Member 24", title: "Member", image: "assets/gallery-0335.jpg" },
+                  { name: "New Member 25", title: "Member", image: "assets/gallery-0336.jpg" },
+                  { name: "New Member 26", title: "Member", image: "assets/gallery-0337.jpg" },
+                  { name: "New Member 27", title: "Member", image: "assets/gallery-0338.jpg" },
+                  { name: "New Member 28", title: "Member", image: "assets/gallery-0339.jpg" },
+                  { name: "New Member 29", title: "Member", image: "assets/gallery-0340.jpg" },
+                  { name: "New Member 30", title: "Member", image: "assets/gallery-0341.jpg" },
+                  { name: "New Member 31", title: "Member", image: "assets/gallery-0342.jpg" },
+                  { name: "New Member 32", title: "Member", image: "assets/gallery-0343.jpg" },
+                  { name: "New Member 33", title: "Member", image: "assets/gallery-0344.jpg" },
+                  { name: "New Member 34", title: "Member", image: "assets/gallery-0345.jpg" }
                 ]
               }
             ].map((committee, index) => (
@@ -923,26 +1089,8 @@ const AboutPage = ({ onNavigate }) => {
                 className="bg-white rounded-2xl shadow-xl p-12 hover:shadow-2xl transition-all duration-300 border-t-4 border-gold"
               >
                 <h3 className="text-3xl font-black text-primary mb-3 text-center">{committee.name}</h3>
-                <div className={`grid ${committee.name === "Young Network Committee" ? "grid-cols-1 md:grid-cols-3 lg:grid-cols-5" : "md:grid-cols-2"} gap-6 mb-6`}>
-                  {committee.name === "Young Network Committee" && (
-                    <>
-                      {/* Advisor Card - Centered at top */}
-                      <div className="md:col-span-3 lg:col-span-5 text-center mb-8">
-                        <div className="bg-gradient-to-br from-gold/20 to-primary/20 rounded-2xl p-8 shadow-xl border-2 border-gold/30 max-w-md mx-auto">
-                          <img
-                            src={committee.advisorImage}
-                            alt={committee.advisor}
-                            className="w-40 h-40 object-cover rounded-full mx-auto mb-6 shadow-2xl border-6 border-white"
-                            onError={(e) => e.target.src = 'https://via.placeholder.com/160x160?text=Image+Not+Found'}
-                          />
-                          <h4 className="text-2xl font-black text-gold mb-3">{committee.advisorTitle}</h4>
-                          <p className="text-gray-800 font-black text-xl">{committee.advisor}</p>
-                        </div>
-                      </div>
-                    </>
-                  )}
-                  {/* President/Chairman - shown for all committees */}
-                  <div className="text-center">
+                { (committee.name === "Press and Publication Committee" || committee.name === "IT Committee") && (
+                  <div className="text-center mb-8">
                     <img
                       src={committee.presidentImage}
                       alt={committee.president}
@@ -953,20 +1101,135 @@ const AboutPage = ({ onNavigate }) => {
                     <p className="text-gray-800 font-bold text-sm">{committee.president}</p>
                     {committee.presidentPosition && <p className="text-gray-600 text-xs">{committee.presidentPosition}</p>}
                   </div>
-                  {/* Vice President - shown for all committees */}
-                  <div className="text-center">
-                    <img
-                      src={committee.vicePresidentImage}
-                      alt={committee.vicePresident}
-                      className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
-                      onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
-                    />
-                    <h4 className="text-lg font-bold text-gold mb-2">{committee.vicePresidentTitle || "Vice President"}</h4>
-                    <p className="text-gray-800 font-bold text-sm">{committee.vicePresident}</p>
+                )}
+                {(committee.name === "Press and Publication Committee" || committee.name === "IT Committee") && committee.viceChairmen && (
+                  <div className={`grid ${committee.name === "IT Committee" ? "grid-cols-5" : "grid-cols-5"} gap-4 mb-6`}>
+                    {committee.viceChairmen.map((vice, idx) => (
+                      <div key={idx} className="text-center">
+                        <img
+                          src={vice.image}
+                          alt={vice.name}
+                          className="w-20 h-20 object-cover rounded-full mx-auto mb-2 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/80x80?text=Image+Not+Found'}
+                        />
+                        <h5 className="text-sm font-bold text-primary">{vice.title}</h5>
+                        <p className="text-gray-800 font-bold text-xs">{vice.name}</p>
+                      </div>
+                    ))}
                   </div>
+                )}
+                <div className={`grid ${committee.name === "Young Network Committee" ? "grid-cols-1 md:grid-cols-3 lg:grid-cols-5" : committee.name === "Women Network Committee" ? "md:grid-cols-3" : committee.name === "IT Committee" ? "md:grid-cols-5" : "md:grid-cols-2"} gap-6 mb-6`}>
+                  {committee.name === "Young Network Committee" && (
+                    <>
+                      {/* Advisors - 1st row */}
+                      <div className="md:col-span-3 lg:col-span-5 mb-8">
+                        <div className="grid grid-cols-3 gap-4 justify-center">
+                          {committee.advisors.map((adv, idx) => (
+                            <div key={idx} className="bg-gradient-to-br from-gold/20 to-primary/20 rounded-2xl p-6 shadow-xl border-2 border-gold/30 text-center">
+                              <img
+                                src={adv.image}
+                                alt={adv.name}
+                                className="w-24 h-24 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                                onError={(e) => e.target.src = 'https://via.placeholder.com/96x96?text=Image+Not+Found'}
+                              />
+                              <h5 className="text-lg font-bold text-gold mb-2">{adv.title}</h5>
+                              <p className="text-gray-800 font-bold text-sm">{adv.name}</p>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    </>
+                  )}
+                  {committee.name !== "Press and Publication Committee" && committee.name !== "IT Committee" && (
+                    <>
+                      {/* President/Chairman - shown for all committees except Press and IT */}
+                      <div className="text-center">
+                        <img
+                          src={committee.presidentImage}
+                          alt={committee.president}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-primary mb-2">{committee.presidentTitle || "President"}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.president}</p>
+                        {committee.presidentPosition && <p className="text-gray-600 text-sm">{committee.presidentPosition}</p>}
+                      </div>
+                    </>
+                  )}
+                  {committee.name === "Women Network Committee" && (
+                    <>
+                      {/* Vice President, Secretary, and Treasurer for Women */}
+                      <div className="text-center">
+                        <img
+                          src={committee.vicePresidentImage}
+                          alt={committee.vicePresident}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-primary mb-2">{committee.vicePresidentTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.vicePresident}</p>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={committee.secretaryImage}
+                          alt={committee.secretary}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-primary mb-2">{committee.secretaryTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.secretary}</p>
+                        {committee.secretaryPosition && <p className="text-gray-600 text-sm">{committee.secretaryPosition}</p>}
+                      </div>
+                    </>
+                  )}
+                  {committee.name !== "Women Network Committee" && committee.name !== "Press and Publication Committee" && committee.name !== "IT Committee" && (
+                    <>
+                      {/* Vice President - shown for all committees except Women, Press, and IT */}
+                      <div className="text-center">
+                        <img
+                          src={committee.vicePresidentImage}
+                          alt={committee.vicePresident}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-gold mb-2">{committee.vicePresidentTitle || "Vice President"}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.vicePresident}</p>
+                      </div>
+                    </>
+                  )}
                   {committee.name === "Young Network Committee" && (
                     <>
                       {/* Additional Young Network Leaders */}
+                      <div className="text-center">
+                        <img
+                          src={committee.secondVicePresidentImage}
+                          alt={committee.secondVicePresident}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-primary mb-2">{committee.secondVicePresidentTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.secondVicePresident}</p>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={committee.thirdVicePresidentImage}
+                          alt={committee.thirdVicePresident}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-primary mb-2">{committee.thirdVicePresidentTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.thirdVicePresident}</p>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={committee.fourthVicePresidentImage}
+                          alt={committee.fourthVicePresident}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-primary mb-2">{committee.fourthVicePresidentTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.fourthVicePresident}</p>
+                      </div>
                       <div className="text-center">
                         <img
                           src={committee.secretaryGeneralImage}
@@ -974,7 +1237,7 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
                         />
-                        <h4 className="text-lg font-bold text-gold mb-2">{committee.secretaryGeneralTitle}</h4>
+                        <h4 className="text-lg font-bold text-primary mb-2">{committee.secretaryGeneralTitle}</h4>
                         <p className="text-gray-800 font-bold text-sm">{committee.secretaryGeneral}</p>
                       </div>
                       <div className="text-center">
@@ -984,7 +1247,7 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
                         />
-                        <h4 className="text-lg font-bold text-gold mb-2">{committee.itHeadTitle}</h4>
+                        <h4 className="text-lg font-bold text-primary mb-2">{committee.itHeadTitle}</h4>
                         <p className="text-gray-800 font-bold text-sm">{committee.itHead}</p>
                       </div>
                       <div className="text-center">
@@ -994,7 +1257,7 @@ const AboutPage = ({ onNavigate }) => {
                           className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
                           onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
                         />
-                        <h4 className="text-lg font-bold text-gold mb-2">{committee.assistantHeadTitle}</h4>
+                        <h4 className="text-lg font-bold text-primary mb-2">{committee.assistantHeadTitle}</h4>
                         <p className="text-gray-800 font-bold text-sm">{committee.assistantHead}</p>
                       </div>
                     </>
