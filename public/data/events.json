@@ -75,7 +75,7 @@
     "location": "",
     "description": "Ethical and intellectual development initiative highlighting Qur'anic values and leadership.",
     "content": "This program highlighted the moral and intellectual impact of Qur'an meaning-based study on leadership development. The event emphasized ethical awareness, inner discipline, and value-based leadership among students, particularly focusing on women's engagement and empowerment.",
-    "image": "/assets/Quran compt.png.webp",
+    "image": "/assets/women network.jpeg",
     "featured": true,
     "enabled": true,
     "status": "ongoing",
@@ -237,5 +237,22 @@
     "capacity": 180,
     "registered": 150,
     "category": "technology"
+  },
+  {
+    "id": 15,
+    "title": "Islamic History & Culture Olympiad",
+    "date": "",
+    "time": "",
+    "location": "",
+    "description": "Annual nationwide Olympiad aimed at strengthening Islamic identity, history, and cultural awareness among Muslim youth.",
+    "content": "Islamic History & Culture Olympiad (IHCO) is an annual competition centered on Islamic history, civilization, and cultural heritage. The primary objective of this Olympiad is to make Muslim youth aware of their identity, faith, and historical legacy through structured learning and healthy competition.\n\nStudents from any class and educational background are eligible to participate, making the Olympiad inclusive and widely accessible. Since 2019, IHCOF has been consistently organizing this event with the vision of nurturing informed, confident, and value-driven young Muslims.\n\nThrough this initiative, participants gain a deeper understanding of Islamic civilization, notable historical figures, and the moral lessons embedded within Islamic history. The Olympiad encourages critical thinking, self-reflection, and pride in Islamic heritage while promoting unity and intellectual growth among the younger generation.",
+    "image": "/assets/islamic olympiad.jpg",
+    "featured": true,
+    "enabled": true,
+    "status": "ongoing",
+    "priority": "high",
+    "capacity": 1000,
+    "registered": 0,
+    "category": "education"
   }
 ]

@@ -769,21 +769,32 @@ const AboutPage = ({ onNavigate }) => {
               {
                 name: "Ulama Committee",
                 description: "Leading religious scholars and committee guidance",
-                president: "Mufti Mohammad Osman Goni",
+                president: "Mufti Shaikh Muhammad Osman Goni",
                 presidentImage: "assets/Mufti osman goni.jpeg",
                 presidentTitle: "Chairman",
-                vicePresident: "Vice Chairman",
-                vicePresidentImage: "assets/MEN in muslim.webp",
+                vicePresident: "Mufti Maulana Muhammad Muhiuddin",
+                vicePresidentImage: "assets/ulama comitee 1.jpeg",
                 vicePresidentTitle: "Vice Chairman",
+                secondVicePresident: "Maulana Muhammad Abdur Rakib Khan",
+                secondVicePresidentImage: "assets/ulama comitee 2.jpeg",
+                secondVicePresidentTitle: "Vice Chairman",
+                generalSecretary: "Hafez Maulana Mufti Muhammad Afzal Hussain",
+                generalSecretaryImage: "assets/ulama comitee 3.jpeg",
+                generalSecretaryTitle: "General Secretary",
+                jointSecretary: "Hafez Maulana Mufti Muhammad Akhtar Hussain",
+                jointSecretaryImage: "assets/ulama comitee 4 .jpeg",
+                jointSecretaryTitle: "Joint Secretary",
+                organizationalSecretary: "Maulana Hakim Muhammad Azharul Islam Numani",
+                organizationalSecretaryImage: "assets/ulama comitee 5.jpeg",
+                organizationalSecretaryTitle: "Organizational Secretary",
+                assistantOrganizationalSecretary: "Maulana BM Muhammad Amir Hussain Jihadi",
+                assistantOrganizationalSecretaryImage: "assets/ulama comitee 6.jpeg",
+                assistantOrganizationalSecretaryTitle: "Assistant Organizational Secretary",
                 members: [
-                  { name: "Sheikh Ahmed Al-Rashid", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Mufti Ibrahim Al-Hasan", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Dr. Omar Al-Farouq", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Imam Yusuf Al-Zahra", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Sheikh Khalid Al-Mansoori", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Mufti Tariq Al-Siddiqui", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Dr. Hassan Al-Qurtubi", title: "Member", image: "assets/MEN in muslim.webp" },
-                  { name: "Imam Saad Al-Riyadh", title: "Member", image: "assets/MEN in muslim.webp" }
+                  { name: "Maulana Muhammad Abu Bakar Chakari", title: "Member", image: "assets/ulama comitee 7.jpeg" },
+                  { name: "Hafez Maulana Muhammad Shahidul Islam", title: "Member", image: "assets/ulama comitee 8.jpeg" },
+                  { name: "Maulana Muhammad Jawhar Iqbal Khan", title: "Member", image: "assets/ulama comitee 9.jpeg" },
+                  { name: "Mufti Muhammad Said Hasan Shamsabadi", title: "Member", image: "assets/ulama comitee 10.jpeg" }
                 ]
               },
               {
@@ -1130,6 +1141,89 @@ const AboutPage = ({ onNavigate }) => {
                     <p className="text-gray-700 leading-relaxed text-xl font-medium">{committee.description}</p>
                   </div>
                 )}
+                {committee.name === "Ulama Committee" && (
+                  <>
+                    {/* 1st row: Chairman */}
+                    <div className="grid grid-cols-1 gap-6 mb-6">
+                      <div className="text-center">
+                        <img
+                          src={committee.presidentImage}
+                          alt={committee.president}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-primary mb-2">{committee.presidentTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.president}</p>
+                      </div>
+                    </div>
+                    {/* 2nd row: 4 people */}
+                    <div className="grid grid-cols-4 gap-6 mb-6">
+                      <div className="text-center">
+                        <img
+                          src={committee.vicePresidentImage}
+                          alt={committee.vicePresident}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-gold mb-2">{committee.vicePresidentTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.vicePresident}</p>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={committee.secondVicePresidentImage}
+                          alt={committee.secondVicePresident}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-gold mb-2">{committee.secondVicePresidentTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.secondVicePresident}</p>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={committee.generalSecretaryImage}
+                          alt={committee.generalSecretary}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-gold mb-2">{committee.generalSecretaryTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.generalSecretary}</p>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={committee.jointSecretaryImage}
+                          alt={committee.jointSecretary}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-gold mb-2">{committee.jointSecretaryTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.jointSecretary}</p>
+                      </div>
+                    </div>
+                    {/* 3rd row: rest */}
+                    <div className="grid grid-cols-2 gap-6 mb-6">
+                      <div className="text-center">
+                        <img
+                          src={committee.organizationalSecretaryImage}
+                          alt={committee.organizationalSecretary}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-gold mb-2">{committee.organizationalSecretaryTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.organizationalSecretary}</p>
+                      </div>
+                      <div className="text-center">
+                        <img
+                          src={committee.assistantOrganizationalSecretaryImage}
+                          alt={committee.assistantOrganizationalSecretary}
+                          className="w-32 h-32 object-cover rounded-full mx-auto mb-4 shadow-lg border-4 border-white"
+                          onError={(e) => e.target.src = 'https://via.placeholder.com/128x128?text=Image+Not+Found'}
+                        />
+                        <h4 className="text-lg font-bold text-gold mb-2">{committee.assistantOrganizationalSecretaryTitle}</h4>
+                        <p className="text-gray-800 font-bold text-sm">{committee.assistantOrganizationalSecretary}</p>
+                      </div>
+                    </div>
+                  </>
+                )}
                 <div className={`grid ${committee.name === "Young Network Committee" ? "grid-cols-1 md:grid-cols-3 lg:grid-cols-5" : committee.name === "Women Network Committee" ? "md:grid-cols-3" : committee.name === "IT Committee" ? "md:grid-cols-5" : "md:grid-cols-2"} gap-6 mb-6`}>
                   {committee.name === "Young Network Committee" && (
                     <>
@@ -1153,9 +1247,9 @@ const AboutPage = ({ onNavigate }) => {
                       </div>
                     </>
                   )}
-                  {committee.name !== "Press and Publication Committee" && committee.name !== "IT Committee" && committee.name !== "Women Network Committee" && (
+                  {committee.name !== "Press and Publication Committee" && committee.name !== "IT Committee" && committee.name !== "Women Network Committee" && committee.name !== "Ulama Committee" && (
                     <>
-                      {/* President/Chairman - shown for all committees except Press, IT, and Women Network */}
+                      {/* President/Chairman - shown for all committees except Press, IT, Women Network, and Ulama */}
                       <div className="text-center">
                         <img
                           src={committee.presidentImage}
@@ -1209,9 +1303,9 @@ const AboutPage = ({ onNavigate }) => {
                       <div className="col-span-1"></div>
                     </>
                   )}
-                  {committee.name !== "Women Network Committee" && committee.name !== "Press and Publication Committee" && committee.name !== "IT Committee" && (
+                  {committee.name !== "Women Network Committee" && committee.name !== "Press and Publication Committee" && committee.name !== "IT Committee" && committee.name !== "Ulama Committee" && (
                     <>
-                      {/* Vice President - shown for all committees except Women, Press, and IT */}
+                      {/* Vice President - shown for all committees except Women, Press, IT, and Ulama */}
                       <div className="text-center">
                         <img
                           src={committee.vicePresidentImage}
@@ -1224,6 +1318,7 @@ const AboutPage = ({ onNavigate }) => {
                       </div>
                     </>
                   )}
+
                   {committee.name === "Young Network Committee" && (
                     <>
                       {/* Additional Young Network Leaders */}
