@@ -1094,6 +1094,33 @@ const AboutPage = ({ onNavigate }) => {
                   { name: "Lina Akter", title: "Member", image: "assets/gallery-0337.jpg" },
                   { name: "Tina Rahman", title: "Member", image: "assets/gallery-0338.jpg" },
                   { name: "Dina Islam", title: "Member", image: "assets/gallery-0339.jpg" },
+                  { name: "Ayesha Rahman", title: "Member", image: "assets/gallery-0350.jpg" },
+                  { name: "Nusrat Jahan", title: "Member", image: "assets/gallery-0351.jpg" },
+                  { name: "Farzana Akter", title: "Member", image: "assets/gallery-0352.jpg" },
+                  { name: "Sadia Islam", title: "Member", image: "assets/gallery-0353.jpg" },
+                  { name: "Maliha Chowdhury", title: "Member", image: "assets/gallery-0354.jpg" },
+                  { name: "Tahmina Begum", title: "Member", image: "assets/gallery-0355.jpg" },
+                  { name: "Rumana Karim", title: "Member", image: "assets/gallery-0356.jpg" },
+                  { name: "Sharmin Sultana", title: "Member", image: "assets/gallery-0357.jpg" },
+                  { name: "Israt Jahan", title: "Member", image: "assets/gallery-0358.jpg" },
+                  { name: "Lubna Yasmin", title: "Member", image: "assets/gallery-0359.jpg" },
+                  { name: "Sanjida Haque", title: "Member", image: "assets/gallery-0360.jpg" },
+                  { name: "Nabila Hossain", title: "Member", image: "assets/gallery-0361.jpg" },
+                  { name: "Fariha Noor", title: "Member", image: "assets/gallery-0362.jpg" },
+                  { name: "Mst. Roksana Khatun", title: "Member", image: "assets/gallery-0363.jpg" },
+                  { name: "Jannatul Ferdous", title: "Member", image: "assets/gallery-0364.jpg" },
+                  { name: "Afia Tasnim", title: "Member", image: "assets/gallery-0365.jpg" },
+                  { name: "Sultana Parvin", title: "Member", image: "assets/gallery-0366.jpg" },
+                  { name: "Nargis Akhter", title: "Member", image: "assets/gallery-0367.jpg" },
+
+                  { name: "Rashida Akter", title: "Member", image: "assets/gallery-0381.jpg" },
+                  { name: "Khadija Begum", title: "Member", image: "assets/gallery-0384.jpg" },
+                  { name: "Halima Banu", title: "Member", image: "assets/gallery-0386.jpg" },
+
+                  { name: "Samia Rahim", title: "Member", image: "assets/gallery-0401.jpg" },
+                  { name: "Tasnia Mahmud", title: "Member", image: "assets/gallery-0402.jpg" },
+                  { name: "Iffat Ara", title: "Member", image: "assets/gallery-0405.jpg" }
+                                        
                 ]
               }
             ].map((committee, index) => (
